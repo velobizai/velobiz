@@ -10,7 +10,7 @@
  */
 
 const BASE_ID = 'appHYrysGW1ozoHqS';
-const PAT = '';
+const airtableaccess = '';
 const AIRTABLE_API_BASE = 'https://api.airtable.com/v0';
 const AIRTABLE_META_API_BASE = 'https://api.airtable.com/v0/meta/bases';
 
@@ -19,7 +19,7 @@ async function airtableRequest(url, method = 'GET', body = null) {
   const options = {
     method,
     headers: {
-      'Authorization': `Bearer ${PAT}`,
+      'Authorization': `Bearer ${airtableaccess}`,
       'Content-Type': 'application/json'
     }
   };
