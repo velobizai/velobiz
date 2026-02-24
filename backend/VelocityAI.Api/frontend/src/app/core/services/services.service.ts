@@ -8,7 +8,7 @@ import { ApiResponse } from '../models/api-response.model';
   providedIn: 'root'
 })
 export class ServicesService {
-  private readonly apiUrl = 'http://localhost:5001/api/services';
+  private readonly apiUrl = 'http://localhost:5249/api/services';
   private servicesCache = signal<Service[] | null>(null);
 
   constructor(private http: HttpClient) {}

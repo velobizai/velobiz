@@ -1,0 +1,15 @@
+{
+  "name": "velobiz-airtable-setup",
+  "version": "1.0.0",
+  "description": "Setup script for velobiz Airtable tables and seed data",
+  "type": "module",
+  "scripts": {
+    "setup": "node setup-airtable.js"
+  },
+  "keywords": ["airtable", "setup", "velobiz"],
+  "author": "velobiz",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
