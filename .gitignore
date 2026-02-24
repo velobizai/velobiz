@@ -37,4 +37,3 @@ backend/VelocityAI.Api/bin/
 
 # Scripts
 scripts/node_modules/
-backend/VelocityAI.Api/appsettings.Development.json
