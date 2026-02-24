@@ -1,0 +1,68 @@
+<main class="pricing-page">
+  <!-- Hero Section -->
+  <section class="pricing-hero">
+    <div class="pricing-hero__content">
+      <h1 class="pricing-hero__headline">Simple, Transparent Pricing</h1>
+      <p class="pricing-hero__subheading">
+        Choose the plan that fits your business. No hidden fees, no surprises. Start with a free trial.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section class="pricing-cards">
+    <div class="pricing-cards__container">
+      @for (tier of tiers; track tier.id) {
+        <article
+          class="pricing-card"
+          [class.pricing-card--popular]="tier.popular"
+          appScrollReveal>
+
+          @if (tier.popular) {
+            <div class="pricing-card__badge">Most Popular</div>
+          }
+
+          <div class="pricing-card__header">
+            <h2 class="pricing-card__name">{{ tier.name }}</h2>
+            <p class="pricing-card__description">{{ tier.description }}</p>
+          </div>
+
+          <div class="pricing-card__price">
+            <span class="pricing-card__price-amount">{{ tier.price }}</span>
+            <span class="pricing-card__price-subtext">{{ tier.priceSubtext }}</span>
+          </div>
+
+          <button
+            class="pricing-card__cta"
+            [class.pricing-card__cta--popular]="tier.popular"
+            routerLink="/contact">
+            {{ tier.ctaText }}
+          </button>
+
+          <ul class="pricing-card__features">
+            @for (feature of tier.features; track feature) {
+              <li class="pricing-card__feature">
+                <span class="pricing-card__feature-icon">✓</span>
+                {{ feature }}
+              </li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+  </section>
+
+  <!-- FAQ Preview -->
+  <section class="pricing-faq-preview">
+    <div class="pricing-faq-preview__content">
+      <h2 class="pricing-faq-preview__headline">Have Questions?</h2>
+      <p class="pricing-faq-preview__subtext">
+        Check out our frequently asked questions or contact us directly.
+      </p>
+      <div class="pricing-faq-preview__buttons">
+        <button class="btn-primary" routerLink="/faq">View FAQs</button>
+        <button class="btn-secondary" routerLink="/contact">Contact Us</button>
+      </div>
+    </div>
+  </section>
+</main>

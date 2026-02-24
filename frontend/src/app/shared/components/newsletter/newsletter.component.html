@@ -1,0 +1,49 @@
+<section class="newsletter" appScrollReveal>
+  <div class="newsletter__container">
+    <div class="newsletter__content">
+      <div class="newsletter__icon">📧</div>
+      <div class="newsletter__text">
+        <h3 class="newsletter__title">Subscribe to our newsletter</h3>
+        <p class="newsletter__description">
+          Get the latest AI automation insights, case studies, and product updates delivered to your inbox.
+        </p>
+      </div>
+    </div>
+
+    <form [formGroup]="newsletterForm" (ngSubmit)="onSubmit()" class="newsletter__form">
+      @if (submitSuccess()) {
+        <div class="newsletter__success">
+          <span class="newsletter__success-icon">✓</span>
+          Thank you for subscribing!
+        </div>
+      } @else {
+        <div class="newsletter__input-wrapper">
+          <input
+            type="email"
+            formControlName="email"
+            class="newsletter__input"
+            [class.newsletter__input--error]="emailControl?.invalid && emailControl?.touched"
+            placeholder="Enter your email address"
+          />
+          @if (emailControl?.invalid && emailControl?.touched) {
+            <span class="newsletter__error-text">Please enter a valid email</span>
+          }
+        </div>
+        <button
+          type="submit"
+          class="newsletter__submit"
+          [disabled]="submitting()">
+          @if (submitting()) {
+            Subscribing...
+          } @else {
+            Subscribe
+          }
+        </button>
+      }
+    </form>
+
+    @if (submitError()) {
+      <div class="newsletter__error">{{ submitError() }}</div>
+    }
+  </div>
+</section>

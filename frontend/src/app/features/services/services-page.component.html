@@ -1,0 +1,55 @@
+<main class="services-page">
+  <!-- Hero Section -->
+  <section class="services-hero">
+    <div class="services-hero__content">
+      <h1 class="services-hero__headline">AI Automation Services</h1>
+      <p class="services-hero__subheading">
+        End-to-end AI solutions tailored to your business needs. From customer support to complex workflows, we build intelligent agents that work.
+      </p>
+    </div>
+  </section>
+
+  <!-- Loading State -->
+  @if (loading()) {
+    <section class="services-loading">
+      <div class="loading-spinner"></div>
+      <p>Loading services...</p>
+    </section>
+  }
+
+  <!-- Error State -->
+  @if (error() && !loading()) {
+    <section class="services-error">
+      <p class="error-message">{{ error() }}</p>
+      <button class="retry-button" (click)="retry()">Retry</button>
+    </section>
+  }
+
+  <!-- Services Grid -->
+  @if (!loading() && !error() && services().length > 0) {
+    <section class="services-grid">
+      <div class="services-grid__container">
+        @for (service of services(); track service.id) {
+          <div appScrollReveal>
+            <app-service-card [service]="service" />
+          </div>
+        }
+      </div>
+    </section>
+  }
+
+  <!-- CTA Section -->
+  @if (!loading()) {
+    <section class="services-cta">
+      <div class="services-cta__content">
+        <h2 class="services-cta__headline">Ready to Get Started?</h2>
+        <p class="services-cta__subtext">
+          Schedule a free consultation to discuss your automation needs and discover which services fit your business.
+        </p>
+        <button class="services-cta__button" routerLink="/contact">
+          Book Your Free Consultation
+        </button>
+      </div>
+    </section>
+  }
+</main>

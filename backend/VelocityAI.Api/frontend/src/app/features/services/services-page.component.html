@@ -1,0 +1,59 @@
+<section class="services-page">
+  <div class="container">
+    <!-- Page Header -->
+    <header class="page-header" appScrollReveal>
+      <h1>Our AI Automation Services</h1>
+      <p class="subtitle">
+        Transform your business with intelligent automation solutions tailored to your
+        industry and workflow. From voice AI agents to marketing automation, we help you
+        scale operations and reduce costs.
+      </p>
+    </header>
+
+    <!-- Loading State -->
+    @if (loading()) {
+      <div class="loading-state" role="status" aria-live="polite">
+        <div class="spinner"></div>
+        <p>Loading services...</p>
+      </div>
+    }
+
+    <!-- Error State -->
+    @if (error() && !loading()) {
+      <div class="error-state" role="alert" aria-live="polite">
+        <div class="error-icon">⚠️</div>
+        <p>{{ error() }}</p>
+        <button class="btn-retry" (click)="retry()" aria-label="Retry loading services">
+          Retry
+        </button>
+      </div>
+    }
+
+    <!-- Services Grid -->
+    @if (!loading() && !error() && services().length > 0) {
+      <div class="services-grid">
+        @for (service of services(); track service.id; let i = $index) {
+          <app-service-card
+            [service]="service"
+            appScrollReveal
+            [appScrollRevealDelay]="i * 100"
+          />
+        }
+      </div>
+    }
+
+    <!-- CTA Banner -->
+    @if (!loading() && !error()) {
+      <div class="cta-banner" appScrollReveal>
+        <h2>Ready to Automate Your Business?</h2>
+        <p>
+          Schedule a free consultation to discuss which AI automation solutions are right for your business.
+          Our team will help you identify high-impact use cases and create a customized implementation plan.
+        </p>
+        <a routerLink="/contact" class="btn-primary">
+          Get Started
+        </a>
+      </div>
+    }
+  </div>
+</section>

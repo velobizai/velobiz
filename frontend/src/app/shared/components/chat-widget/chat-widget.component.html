@@ -1,0 +1,94 @@
+<!-- Chat Button -->
+<button
+  class="chat-button"
+  [class.chat-button--active]="isOpen()"
+  (click)="toggleChat()"
+  aria-label="Open chat">
+  @if (isOpen()) {
+    <mat-icon>close</mat-icon>
+  } @else {
+    <mat-icon>chat</mat-icon>
+  }
+  @if (!isOpen()) {
+    <span class="chat-button__badge">1</span>
+  }
+</button>
+
+<!-- Chat Window -->
+@if (isOpen()) {
+  <div class="chat-window" [class.chat-window--minimized]="isMinimized()">
+    <!-- Header -->
+    <div class="chat-header">
+      <div class="chat-header__info">
+        <div class="chat-header__avatar">🤖</div>
+        <div class="chat-header__text">
+          <div class="chat-header__title">AI Assistant</div>
+          <div class="chat-header__status">
+            <span class="chat-header__status-dot"></span>
+            Online
+          </div>
+        </div>
+      </div>
+      <div class="chat-header__actions">
+        <button
+          class="chat-header__action"
+          (click)="minimizeChat()"
+          aria-label="Minimize chat">
+          <mat-icon>minimize</mat-icon>
+        </button>
+        <button
+          class="chat-header__action"
+          (click)="closeChat()"
+          aria-label="Close chat">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <!-- Messages -->
+    @if (!isMinimized()) {
+      <div class="chat-messages">
+        @for (message of messages(); track message.id) {
+          <div
+            class="chat-message"
+            [class.chat-message--user]="message.sender === 'user'"
+            [class.chat-message--bot]="message.sender === 'bot'">
+            <div class="chat-message__bubble">
+              {{ message.text }}
+            </div>
+          </div>
+        }
+
+        @if (isTyping()) {
+          <div class="chat-message chat-message--bot">
+            <div class="chat-message__bubble chat-message__bubble--typing">
+              <span class="typing-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Input -->
+      <div class="chat-input">
+        <input
+          type="text"
+          class="chat-input__field"
+          placeholder="Type your message..."
+          [(ngModel)]="messageInput"
+          (keypress)="handleKeyPress($event)"
+        />
+        <button
+          class="chat-input__send"
+          (click)="sendMessage()"
+          [disabled]="!messageInput().trim()"
+          aria-label="Send message">
+          <mat-icon>send</mat-icon>
+        </button>
+      </div>
+    }
+  </div>
+}

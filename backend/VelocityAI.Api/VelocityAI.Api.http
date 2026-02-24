@@ -1,0 +1,6 @@
+@VelocityAI.Api_HostAddress = http://localhost:5249
+
+GET {{VelocityAI.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

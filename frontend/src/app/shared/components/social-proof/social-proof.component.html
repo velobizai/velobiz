@@ -1,0 +1,13 @@
+<section class="social-proof" appScrollReveal>
+  <div class="social-proof__container">
+    @for (badge of badges; track badge.id) {
+      <div class="badge">
+        <div class="badge__icon">{{ badge.icon }}</div>
+        <div class="badge__content">
+          <div class="badge__title">{{ badge.title }}</div>
+          <div class="badge__subtitle">{{ badge.subtitle }}</div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

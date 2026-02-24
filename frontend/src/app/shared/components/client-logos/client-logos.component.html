@@ -1,0 +1,16 @@
+<section class="client-logos" appScrollReveal>
+  <div class="client-logos__container">
+    <h3 class="client-logos__heading">Trusted by Industry Leaders</h3>
+
+    <div class="client-logos__track-wrapper">
+      <div class="client-logos__track">
+        @for (logo of logos; track logo.id + $index) {
+          <div class="client-logo">
+            <div class="client-logo__icon">{{ logo.logo }}</div>
+            <div class="client-logo__name">{{ logo.name }}</div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

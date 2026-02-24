@@ -1,0 +1,23 @@
+@if (isVisible()) {
+  <div class="cookie-consent">
+    <div class="cookie-consent__content">
+      <div class="cookie-consent__icon">🍪</div>
+      <div class="cookie-consent__text">
+        <h3 class="cookie-consent__title">We use cookies</h3>
+        <p class="cookie-consent__description">
+          We use cookies to enhance your browsing experience and analyze our traffic.
+          By clicking "Accept", you consent to our use of cookies.
+          <a routerLink="#" class="cookie-consent__link">Learn more</a>
+        </p>
+      </div>
+      <div class="cookie-consent__actions">
+        <button class="cookie-consent__btn cookie-consent__btn--secondary" (click)="declineCookies()">
+          Decline
+        </button>
+        <button class="cookie-consent__btn cookie-consent__btn--primary" (click)="acceptCookies()">
+          Accept
+        </button>
+      </div>
+    </div>
+  </div>
+}

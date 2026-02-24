@@ -1,0 +1,66 @@
+<section class="testimonials" appScrollReveal>
+  <div class="testimonials__container">
+    <h2 class="testimonials__heading">What Our Clients Say</h2>
+    <p class="testimonials__subheading">
+      Trusted by businesses worldwide to automate and accelerate operations
+    </p>
+
+    <div class="testimonials__carousel">
+      <!-- Navigation Buttons -->
+      <button
+        class="testimonials__nav testimonials__nav--prev"
+        (click)="previousTestimonial()"
+        aria-label="Previous testimonial">
+        ‹
+      </button>
+
+      <!-- Testimonial Cards -->
+      <div class="testimonials__cards">
+        @for (testimonial of testimonials; track testimonial.id; let i = $index) {
+          <div
+            class="testimonial-card"
+            [class.testimonial-card--active]="currentIndex() === i"
+            [class.testimonial-card--prev]="currentIndex() === (i + 1) % testimonials.length"
+            [class.testimonial-card--next]="currentIndex() === (i === 0 ? testimonials.length - 1 : i - 1)">
+
+            <div class="testimonial-card__rating">
+              @for (star of getStars(testimonial.rating); track $index) {
+                <span class="testimonial-card__star">★</span>
+              }
+            </div>
+
+            <p class="testimonial-card__text">"{{ testimonial.text }}"</p>
+
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">{{ testimonial.avatar }}</div>
+              <div class="testimonial-card__info">
+                <div class="testimonial-card__name">{{ testimonial.name }}</div>
+                <div class="testimonial-card__role">{{ testimonial.role }}, {{ testimonial.company }}</div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button
+        class="testimonials__nav testimonials__nav--next"
+        (click)="nextTestimonial()"
+        aria-label="Next testimonial">
+        ›
+      </button>
+    </div>
+
+    <!-- Dots Navigation -->
+    <div class="testimonials__dots">
+      @for (testimonial of testimonials; track testimonial.id; let i = $index) {
+        <button
+          class="testimonials__dot"
+          [class.testimonials__dot--active]="currentIndex() === i"
+          (click)="goToTestimonial(i)"
+          [attr.aria-label]="'Go to testimonial ' + (i + 1)">
+        </button>
+      }
+    </div>
+  </div>
+</section>

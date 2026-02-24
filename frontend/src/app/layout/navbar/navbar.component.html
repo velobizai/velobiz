@@ -1,0 +1,79 @@
+<nav class="navbar" [class.navbar--scrolled]="scrolled()">
+  <div class="navbar__container">
+    <!-- Logo -->
+    <a routerLink="/" class="navbar__logo" aria-label="VelocityAI Home">
+      <span class="navbar__logo-text">VelocityAI</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="navbar__nav-list navbar__nav-list--desktop">
+      @for (link of navLinks; track link.route) {
+        <li class="navbar__nav-item">
+          <a
+            [routerLink]="link.route"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: link.route === '/' }"
+            class="navbar__nav-link">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <!-- Desktop CTA Button -->
+    <a routerLink="/contact" class="navbar__cta navbar__cta--desktop">
+      Get Started
+    </a>
+
+    <!-- Mobile Hamburger Button -->
+    <button
+      class="navbar__hamburger"
+      aria-label="Open navigation menu"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+@if (menuOpen()) {
+  <div class="navbar__mobile-overlay" (click)="closeMenu()"></div>
+  <div class="navbar__mobile-drawer">
+    <!-- Close Button -->
+    <div class="navbar__drawer-header">
+      <button
+        class="navbar__drawer-close"
+        aria-label="Close navigation menu"
+        (click)="closeMenu()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Links -->
+    <ul class="navbar__drawer-nav">
+      @for (link of navLinks; track link.route) {
+        <li class="navbar__drawer-item">
+          <a
+            [routerLink]="link.route"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: link.route === '/' }"
+            class="navbar__drawer-link"
+            (click)="closeMenu()">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <!-- Mobile CTA Button -->
+    <div class="navbar__drawer-cta">
+      <a
+        routerLink="/contact"
+        class="navbar__cta navbar__cta--mobile"
+        (click)="closeMenu()">
+        Get Started
+      </a>
+    </div>
+  </div>
+}

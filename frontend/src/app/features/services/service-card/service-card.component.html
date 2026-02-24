@@ -1,0 +1,30 @@
+<div
+  class="service-card"
+  (mouseenter)="onHover(true)"
+  (mouseleave)="onHover(false)"
+  (click)="toggleExpanded()"
+  (keypress)="onKeyPress($event)"
+  tabindex="0"
+  role="button"
+  [attr.aria-expanded]="expanded()"
+  [attr.aria-label]="service.title + ': ' + service.shortDescription">
+
+  <div class="service-icon">{{ getIconEmoji() }}</div>
+
+  <h3 class="service-title">{{ service.title }}</h3>
+
+  <div class="service-description">
+    <p class="short-description" [class.hidden]="expanded()">
+      {{ service.shortDescription }}
+    </p>
+    <p class="long-description" [class.visible]="expanded()">
+      {{ service.longDescription }}
+    </p>
+  </div>
+
+  @if (isMobile) {
+    <span class="tap-hint">
+      {{ expanded() ? 'Tap to collapse' : 'Tap for details' }}
+    </span>
+  }
+</div>

@@ -1,0 +1,27 @@
+{
+  "chunk": 1,
+  "feature": "infrastructure",
+  "feature_folder": "2026-02-infrastructure",
+  "tasks": ["0.1", "0.2", "0.3", "0.4", "0.5"],
+  "task_titles": [
+    "Create .NET Core 8 Web API project",
+    "Install EF Core packages and configure MySQL",
+    "Define entity classes",
+    "Configure ApplicationDbContext with entity mappings and seed data",
+    "Create and apply initial EF Core migration"
+  ],
+  "agent": "Database Engineer",
+  "status": "pending",
+  "started_at": "2026-02-19T00:00:00Z",
+  "estimated_time": "3h 15min",
+  "files": {
+    "created": [],
+    "modified": []
+  },
+  "results": {
+    "build": null,
+    "tests": null,
+    "test_count": 0,
+    "coverage": null
+  }
+}

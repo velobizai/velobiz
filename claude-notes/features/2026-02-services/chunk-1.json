@@ -1,0 +1,80 @@
+{
+  "chunkId": "chunk-1",
+  "featureName": "services",
+  "featureId": "FEATURE-3",
+  "chunkName": "Complete Services Page Implementation",
+  "chunkDescription": "Full implementation of Services Page with database seeding, backend API (repository + service + controller), frontend components (service card + page), routing, and QA verification",
+  "tasks": ["3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12"],
+  "agents": [
+    "Database Engineer (Tasks 3.1-3.2)",
+    "DotNet Architect (Tasks 3.3-3.5)",
+    "Angular Expert (Tasks 3.6-3.10)",
+    "Lead Agent (Tasks 3.11-3.12)"
+  ],
+  "estimatedTime": "8-10 hours",
+  "status": "pending",
+  "filesCreated": [
+    "backend/VelocityAI.Api/Repositories/IServicesRepository.cs",
+    "backend/VelocityAI.Api/Repositories/ServicesRepository.cs",
+    "backend/VelocityAI.Api/Services/IServicesService.cs",
+    "backend/VelocityAI.Api/Services/ServicesService.cs",
+    "backend/VelocityAI.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.cs",
+    "backend/VelocityAI.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.Designer.cs",
+    "frontend/src/app/core/services/services.service.ts",
+    "frontend/src/app/core/services/services.service.spec.ts",
+    "frontend/src/app/core/models/service.model.ts",
+    "frontend/src/app/features/services/service-card/service-card.component.ts",
+    "frontend/src/app/features/services/service-card/service-card.component.html",
+    "frontend/src/app/features/services/service-card/service-card.component.scss",
+    "frontend/src/app/features/services/service-card/service-card.component.spec.ts",
+    "frontend/src/app/features/services/services-page.component.ts",
+    "frontend/src/app/features/services/services-page.component.html",
+    "frontend/src/app/features/services/services-page.component.scss",
+    "frontend/src/app/features/services/services-page.component.spec.ts"
+  ],
+  "filesModified": [
+    "backend/VelocityAI.Api/Data/ApplicationDbContext.cs",
+    "backend/VelocityAI.Api/Controllers/ServicesController.cs",
+    "backend/VelocityAI.Api/Program.cs",
+    "backend/VelocityAI.Api/Migrations/ApplicationDbContextModelSnapshot.cs",
+    "frontend/src/app/app.routes.ts"
+  ],
+  "dependencies": {
+    "requires": [
+      "Feature 0 (Infrastructure)",
+      "Feature 1 (Layout)"
+    ],
+    "unblocks": [
+      "Feature 5 (FAQ Page)",
+      "Feature 6 (Contact Page)"
+    ]
+  },
+  "verificationSteps": [
+    "Run: dotnet ef database update (verify 8 services seeded)",
+    "Run: dotnet run (start backend API)",
+    "Test: GET https://localhost:5001/api/services (expect 200 OK with 8 services)",
+    "Run: ng serve (start frontend)",
+    "Navigate: http://localhost:4200/services",
+    "Verify: 8 service cards render in responsive grid",
+    "Verify: Hover animation works on desktop",
+    "Verify: Tap to expand works on mobile (Chrome DevTools device mode)",
+    "Verify: Loading spinner appears briefly",
+    "Verify: Error state with retry button works (disconnect Wi-Fi, then retry)",
+    "Verify: CTA banner links to /contact",
+    "Verify: ScrollRevealDirective applies staggered fade-up",
+    "Run: ng lint (expect 0 errors)",
+    "Run: ng build --configuration production (expect success)",
+    "Run: Lighthouse audit (expect Performance ≥90, Accessibility ≥90)"
+  ],
+  "rollbackPlan": {
+    "database": "dotnet ef database update InitialCreate",
+    "code": "Revert all commits for Feature 3, remove /services route, remove DI registrations"
+  },
+  "notes": [
+    "Single chunk strategy: All 12 tasks completed together since they're sequential and interdependent",
+    "No tests written (deferred per CLAUDE.md user instruction)",
+    "Existing ServicesPageComponent (with hardcoded data) will be refactored to use API",
+    "Seed data content is finalized in agent-plan-prompt.md (no pending copywriting)",
+    "Design follows VelocityAI dark luxury theme from Features 0-2"
+  ]
+}

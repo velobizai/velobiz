@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  height: 3px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+
+  &__fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+    transition: width 150ms ease-out;
+    box-shadow: 0 0 10px rgba(var(--color-accent-rgb), 0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar__fill {
+    transition-duration: 0.01ms !important;
+  }
+}

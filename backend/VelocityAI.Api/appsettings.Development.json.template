@@ -1,0 +1,16 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;Database=velocityai_dev;User=root;Password=your_password;",
+    "RailwayTemplate": "Server=YOUR_RAILWAY_HOST;Port=YOUR_RAILWAY_PORT;Database=YOUR_RAILWAY_DATABASE;User=YOUR_RAILWAY_USER;Password=YOUR_RAILWAY_PASSWORD;"
+  },
+  "Instructions": {
+    "LocalMySQL": "Use 'DefaultConnection' if you have MySQL installed locally",
+    "Railway": "Replace 'DefaultConnection' value with your Railway connection string from the template above"
+  }
+}

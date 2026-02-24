@@ -1,0 +1,190 @@
+<main class="contact-page">
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <div class="contact-hero__content">
+      <h1 class="contact-hero__headline">Get In Touch</h1>
+      <p class="contact-hero__subheading">
+        Ready to transform your business with AI automation? Schedule a free consultation or reach out with any questions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact-content">
+    <div class="contact-content__container">
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper" appScrollReveal>
+        <h2 class="contact-form-wrapper__heading">Send us a message</h2>
+
+        @if (submitSuccess()) {
+          <div class="contact-form__success">
+            <span class="contact-form__success-icon">✓</span>
+            <p class="contact-form__success-text">
+              Thank you for contacting us! We'll get back to you within 24 hours.
+            </p>
+          </div>
+        }
+
+        @if (submitError()) {
+          <div class="contact-form__error">
+            <p>{{ submitError() }}</p>
+          </div>
+        }
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+          <!-- Name Field -->
+          <div class="form-field">
+            <label for="name" class="form-field__label">
+              Name <span class="form-field__required">*</span>
+            </label>
+            <input
+              id="name"
+              type="text"
+              formControlName="name"
+              class="form-field__input"
+              [class.form-field__input--error]="nameControl?.invalid && nameControl?.touched"
+              placeholder="John Doe"
+            />
+            @if (nameControl?.invalid && nameControl?.touched) {
+              <span class="form-field__error-text">Name is required (min 2 characters)</span>
+            }
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-field">
+            <label for="email" class="form-field__label">
+              Email <span class="form-field__required">*</span>
+            </label>
+            <input
+              id="email"
+              type="email"
+              formControlName="email"
+              class="form-field__input"
+              [class.form-field__input--error]="emailControl?.invalid && emailControl?.touched"
+              placeholder="john@company.com"
+            />
+            @if (emailControl?.invalid && emailControl?.touched) {
+              <span class="form-field__error-text">Please enter a valid email address</span>
+            }
+          </div>
+
+          <!-- Company Field -->
+          <div class="form-field">
+            <label for="company" class="form-field__label">Company</label>
+            <input
+              id="company"
+              type="text"
+              formControlName="company"
+              class="form-field__input"
+              placeholder="Your Company Inc."
+            />
+          </div>
+
+          <!-- Phone Field -->
+          <div class="form-field">
+            <label for="phone" class="form-field__label">Phone</label>
+            <input
+              id="phone"
+              type="tel"
+              formControlName="phone"
+              class="form-field__input"
+              placeholder="+1 (555) 123-4567"
+            />
+          </div>
+
+          <!-- Service Interest Dropdown -->
+          <div class="form-field">
+            <label for="serviceInterest" class="form-field__label">
+              Service Interest <span class="form-field__required">*</span>
+            </label>
+            <select
+              id="serviceInterest"
+              formControlName="serviceInterest"
+              class="form-field__input"
+              [class.form-field__input--error]="contactForm.get('serviceInterest')?.invalid && contactForm.get('serviceInterest')?.touched">
+              <option value="" disabled selected>Select a service...</option>
+              @for (option of serviceInterestOptions; track option) {
+                <option [value]="option">{{ option }}</option>
+              }
+            </select>
+            @if (contactForm.get('serviceInterest')?.invalid && contactForm.get('serviceInterest')?.touched) {
+              <span class="form-field__error-text">Please select a service interest</span>
+            }
+          </div>
+
+          <!-- Honeypot Field (hidden) -->
+          <input
+            type="text"
+            formControlName="honeypot"
+            style="display: none;"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
+
+          <!-- Message Field -->
+          <div class="form-field form-field--full">
+            <label for="message" class="form-field__label">
+              Message <span class="form-field__required">*</span>
+            </label>
+            <textarea
+              id="message"
+              formControlName="message"
+              class="form-field__textarea"
+              [class.form-field__input--error]="messageControl?.invalid && messageControl?.touched"
+              placeholder="Tell us about your automation needs..."
+              rows="5"
+            ></textarea>
+            @if (messageControl?.invalid && messageControl?.touched) {
+              <span class="form-field__error-text">Message is required (min 10 characters)</span>
+            }
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="contact-form__submit"
+            [disabled]="submitting()">
+            @if (submitting()) {
+              <span>Sending...</span>
+            } @else {
+              <span>Send Message</span>
+            }
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info" appScrollReveal>
+        <h2 class="contact-info__heading">Contact Information</h2>
+        <p class="contact-info__subtext">
+          Prefer to reach out directly? Use any of the methods below.
+        </p>
+
+        <div class="contact-info__items">
+          @for (info of contactInfo; track info.title) {
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">{{ info.icon }}</div>
+              <div class="contact-info-item__content">
+                <h3 class="contact-info-item__title">{{ info.title }}</h3>
+                @if (info.link) {
+                  <a [href]="info.link" class="contact-info-item__value contact-info-item__value--link">
+                    {{ info.value }}
+                  </a>
+                } @else {
+                  <p class="contact-info-item__value">{{ info.value }}</p>
+                }
+              </div>
+            </div>
+          }
+        </div>
+
+        <div class="contact-info__footer">
+          <p class="contact-info__footer-text">
+            We typically respond within 24 hours during business days.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

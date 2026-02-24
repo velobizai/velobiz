@@ -1,2 +1,2 @@
-# velobiz
-Velobiz Official website
+# VelocityAI
+Velocity AI

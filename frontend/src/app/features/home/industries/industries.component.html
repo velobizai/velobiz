@@ -1,0 +1,10 @@
+<section class="industries-section" appScrollReveal aria-labelledby="industries-heading">
+  <h2 id="industries-heading" class="section-heading">Industries We Serve</h2>
+
+  <div class="industries-grid">
+    <div class="industry-tile" *ngFor="let industry of industries">
+      <div class="industry-icon">{{ industry.icon }}</div>
+      <div class="industry-name">{{ industry.name }}</div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+@if (overlay) {
+  <div class="spinner-overlay">
+    <div class="spinner-content">
+      <mat-spinner [diameter]="spinnerDiameter" color="accent"></mat-spinner>
+      @if (message) {
+        <p class="spinner-message">{{ message }}</p>
+      }
+    </div>
+  </div>
+} @else {
+  <div class="spinner-inline" [class]="'spinner-' + size">
+    <mat-spinner [diameter]="spinnerDiameter" color="accent"></mat-spinner>
+    @if (message) {
+      <p class="spinner-message">{{ message }}</p>
+    }
+  </div>
+}

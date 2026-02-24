@@ -1,0 +1,116 @@
+:host { display: block; opacity: 1 !important; transform: none !important; }
+.process-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  color: var(--color-text-primary);
+  margin-bottom: 4rem;
+}
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(to right, var(--color-accent), rgba(0, 229, 160, 0.3));
+    z-index: 0;
+  }
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-accent);
+  background: var(--color-bg-primary);
+}
+
+.step-title {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.step-description {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .process-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-heading {
+    font-size: 36px;
+    margin-bottom: 3rem;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .step-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-heading {
+    font-size: 28px;
+  }
+
+  .step-number {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .step-title {
+    font-size: 18px;
+  }
+}

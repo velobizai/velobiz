@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Agent Full-Stack Development Setup Guide</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; line-height: 1.6; max-width: 960px; margin: 0 auto; padding: 20px; color: #172B4D; }
+        h1 { color: #172B4D; border-bottom: 2px solid #0052CC; padding-bottom: 10px; font-size: 1.8em; }
+        h2 { color: #172B4D; margin-top: 30px; border-bottom: 1px solid #DFE1E6; padding-bottom: 8px; }
+        h3 { color: #42526E; margin-top: 20px; }
+        code { background: #F4F5F7; padding: 2px 6px; border-radius: 3px; font-family: 'Monaco', 'Menlo', monospace; font-size: 14px; }
+        pre { background: #F4F5F7; padding: 16px; border-radius: 6px; overflow-x: auto; border-left: 4px solid #0052CC; }
+        pre code { background: none; padding: 0; }
+        .info-box { background: #DEEBFF; border-left: 4px solid #0052CC; padding: 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+        .warning-box { background: #FFFAE6; border-left: 4px solid #FF991F; padding: 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+        .success-box { background: #E3FCEF; border-left: 4px solid #36B37E; padding: 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+        .step { background: #FFFFFF; border: 1px solid #DFE1E6; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .step-number { background: #0052CC; color: white; border-radius: 50%; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 12px; font-size: 14px; }
+        table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+        th, td { border: 1px solid #DFE1E6; padding: 10px 12px; text-align: left; font-size: 14px; }
+        th { background: #F4F5F7; font-weight: 600; }
+        tr:nth-child(even) { background: #FAFBFC; }
+        ul, ol { margin: 10px 0; padding-left: 24px; }
+        li { margin: 6px 0; }
+        a { color: #0052CC; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .toc { background: #F4F5F7; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .toc ul { list-style: none; padding-left: 0; }
+        .toc li { margin: 6px 0; }
+        .toc a { color: #42526E; }
+        .phase-header { background: linear-gradient(135deg, #0052CC 0%, #0747A6 100%); color: white; padding: 12px 20px; border-radius: 6px 6px 0 0; margin-bottom: 0; }
+        .phase-content { border: 1px solid #DFE1E6; border-top: none; padding: 20px; border-radius: 0 0 6px 6px; }
+        .agent-card { border: 2px solid #DFE1E6; border-radius: 8px; padding: 16px; margin: 12px 0; }
+        .agent-card h4 { margin-top: 0; }
+        .agent-planner { border-left: 4px solid #6554C0; }
+        .agent-angular { border-left: 4px solid #FF5630; }
+        .agent-dotnet { border-left: 4px solid #36B37E; }
+        .agent-db { border-left: 4px solid #FF991F; }
+        .agent-uiux { border-left: 4px solid #00B8D9; }
+        .agent-reviewer { border-left: 4px solid #FF991F; }
+        .agent-tester { border-left: 4px solid #0065FF; }
+        .agent-docs { border-left: 4px solid #6554C0; }
+        .agent-github { border-left: 4px solid #24292E; }
+        .agent-vercel { border-left: 4px solid #000000; }
+        .arch-diagram { background: #1A1A2E; color: #EAEAEA; padding: 20px; border-radius: 8px; font-family: 'Monaco', 'Menlo', monospace; font-size: 12px; line-height: 1.8; margin: 16px 0; overflow-x: auto; }
+        .arch-diagram pre { background: none; border: none; color: #EAEAEA; margin: 0; padding: 0; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+        .badge-new { background: #E3FCEF; color: #006644; }
+        .badge-expert { background: #DEEBFF; color: #0747A6; }
+    </style>
+</head>
+<body>
+
+<h1>&#x1F3D7;&#xFE0F; Multi-Agent Full-Stack Development Setup Guide</h1>
+<p><em>Angular 19+ &bull; Angular Material 3+ &bull; .NET Core 6 &bull; MySQL 8 &bull; Modern UI/UX</em></p>
+
+<div class="info-box">
+    <strong>Purpose:</strong> This guide sets up a multi-agent AI development team where <strong>10 specialized agents</strong> collaborate to plan, design, build, review, test, document, commit, and deploy full-stack web applications. Each agent is an industry expert in its technology domain, following best practices from the Angular, .NET, MySQL, UI/UX, Git, and DevOps communities.
+</div>
+
+<div class="toc">
+    <h3>&#x1F4CB; Table of Contents</h3>
+    <ul>
+        <li><a href="#architecture">1. Architecture Overview</a></li>
+        <li><a href="#agents">2. Agent Roster (10 Experts)</a></li>
+        <li><a href="#prerequisites">3. Prerequisites</a></li>
+        <li><a href="#setup">4. Setup Instructions</a></li>
+        <li><a href="#folder-structure">5. Folder Structure</a></li>
+        <li><a href="#lifecycle">6. Development Lifecycle</a></li>
+        <li><a href="#commands">7. Available Commands</a></li>
+        <li><a href="#workflow">8. Step-by-Step Workflow</a></li>
+        <li><a href="#skills">9. Skills Library</a></li>
+        <li><a href="#confirmation-gates">10. Confirmation Gates</a></li>
+        <li><a href="#compatibility">11. Compatibility with Existing SDLC</a></li>
+        <li><a href="#best-practices">12. Best Practices</a></li>
+        <li><a href="#troubleshooting">13. Troubleshooting</a></li>
+    </ul>
+</div>
+
+<h2 id="architecture">1. Architecture Overview</h2>
+
+<div class="arch-diagram">
+<pre>
+&#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+&#x2502;                               LEAD AGENT (Orchestrator)                                       &#x2502;
+&#x2502;              Runs in your interactive Claude Code session (you type here)                      &#x2502;
+&#x2502;  Interviews you &#x2022; Routes tasks &#x2022; Validates outputs &#x2022; Tracks progress &#x2022; Gates git &amp; deploy  &#x2502;
+&#x2514;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+  &#x2502;       &#x2502;        &#x2502;        &#x2502;        &#x2502;       &#x2502;        &#x2502;        &#x2502;       &#x2502;       &#x2502;
+  &#x25BC;       &#x25BC;        &#x25BC;        &#x25BC;        &#x25BC;       &#x25BC;        &#x25BC;        &#x25BC;       &#x25BC;       &#x25BC;
+&#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;  &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510; &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+&#x2502;PLAN &#x2502;  &#x2502;ANGLR &#x2502; &#x2502;DOTNET&#x2502; &#x2502;  DB  &#x2502; &#x2502;UI/UX&#x2502; &#x2502;REVIEW&#x2502; &#x2502; TEST &#x2502; &#x2502;DOCS &#x2502; &#x2502; GIT &#x2502; &#x2502;VRCL &#x2502;
+&#x2502; NER &#x2502;  &#x2502;EXPRT &#x2502; &#x2502;ARCHT&#x2502; &#x2502; ENG  &#x2502; &#x2502;DSGN &#x2502; &#x2502;  ER  &#x2502; &#x2502;  ER  &#x2502; &#x2502;     &#x2502; &#x2502; HUB &#x2502; &#x2502;     &#x2502;
+&#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524;  &#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524; &#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524; &#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524; &#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524; &#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524; &#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524; &#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524; &#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524; &#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524;
+&#x2502;Specs&#x2502;  &#x2502;Cmpnt&#x2502; &#x2502; APIs &#x2502; &#x2502;Schema&#x2502; &#x2502;Scrns&#x2502; &#x2502;Secur &#x2502; &#x2502;xUnit &#x2502; &#x2502;HTML &#x2502; &#x2502;Stge &#x2502; &#x2502;Prev &#x2502;
+&#x2502;Tasks&#x2502;  &#x2502;Mat3 &#x2502; &#x2502;CQRS &#x2502; &#x2502;Migrt&#x2502; &#x2502;Flows&#x2502; &#x2502;Bugs  &#x2502; &#x2502;Jsmne &#x2502; &#x2502;API  &#x2502; &#x2502;Cmit &#x2502; &#x2502;Prod &#x2502;
+&#x2502;ADRs &#x2502;  &#x2502;Sgnls&#x2502; &#x2502;EFCor&#x2502; &#x2502;Index&#x2502; &#x2502;WCAG &#x2502; &#x2502;Perf  &#x2502; &#x2502;Playw &#x2502; &#x2502;Deploy&#x2502; &#x2502;Push &#x2502; &#x2502;Rlbk &#x2502;
+&#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;  &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+Ph 1    Ph 4     Ph 4     Ph 4     Ph 2    Ph 5     Ph 5-7   Ph 3+8  Ph 8    Ph 9
+                                                              &#x26A0;&#xFE0F; Ask   &#x26A0;&#xFE0F; Ask
+</pre>
+</div>
+
+<p><strong>How it works:</strong></p>
+<ul>
+    <li>The <strong>Lead Agent</strong> runs in your interactive Claude Code session</li>
+    <li><strong>Sub-Agents</strong> are spawned as headless processes via <code>claude -p</code></li>
+    <li>Each agent reads its role from <code>.claude/agents/[role].md</code> and uses skills from <code>.claude/skills/</code></li>
+    <li>Tasks are <strong>routed by layer</strong>: <code>[DB]</code> &#x2192; Database Engineer, <code>[API]</code> &#x2192; DotNet Architect, <code>[UI]</code> &#x2192; Angular Expert</li>
+    <li>The Lead Agent validates build + test results before proceeding to the next phase</li>
+    <li><strong>&#x26A0;&#xFE0F; Git and deployment operations always require your explicit approval</strong></li>
+</ul>
+
+<h2 id="agents">2. Agent Roster (10 Industry Experts)</h2>
+
+<div class="agent-card agent-planner">
+    <h4>&#x1F4D0; Planner Agent <span class="badge badge-expert">Senior Solutions Architect</span></h4>
+    <p><strong>File:</strong> <code>.claude/agents/planner.md</code></p>
+    <p><strong>Expertise:</strong> Feature planning, task decomposition, API contract design, dependency ordering, cross-layer architecture</p>
+    <p><strong>Outputs:</strong> Business context, feature spec, architecture decisions, ordered task breakdown with layer tags (<code>[DB]</code>, <code>[API]</code>, <code>[UI]</code>)</p>
+</div>
+
+<div class="agent-card agent-angular">
+    <h4>&#x1F170;&#xFE0F; Angular Expert Agent <span class="badge badge-expert">Senior Angular Developer (10+ yrs)</span></h4>
+    <p><strong>File:</strong> <code>.claude/agents/angular-expert.md</code></p>
+    <p><strong>Expertise:</strong> Angular 19+ standalone components, Angular Material 3+ (M3 theming, MDC components, density config), Signals (stable), RxJS 7, TypeScript strict mode, OnPush/zoneless change detection, signal-based input()/output(), httpResource(), reactive typed forms, lazy routing, WCAG 2.1 AA</p>
+    <p><strong>Patterns:</strong> Smart/Dumb components, <code>inject()</code> function, <code>@if/@for/@defer</code> control flow, NgRx Signal Store, Angular Testing Library, component harnesses</p>
+</div>
+
+<div class="agent-card agent-dotnet">
+    <h4>&#x1F4BB; DotNet Architect Agent <span class="badge badge-expert">Senior .NET Architect (12+ yrs)</span></h4>
+    <p><strong>File:</strong> <code>.claude/agents/dotnet-architect.md</code></p>
+    <p><strong>Expertise:</strong> ASP.NET Core 6 Web APIs, Entity Framework Core, Clean Architecture, CQRS + MediatR, FluentValidation, AutoMapper, JWT auth, Serilog, ProblemDetails RFC 7807</p>
+    <p><strong>Patterns:</strong> Repository pattern, generic CQRS handlers, validation pipeline, global exception middleware, CancellationToken propagation</p>
+</div>
+
+<div class="agent-card agent-db">
+    <h4>&#x1F5C4;&#xFE0F; Database Engineer Agent <span class="badge badge-expert">Senior DBA &amp; Data Architect</span></h4>
+    <p><strong>File:</strong> <code>.claude/agents/database-engineer.md</code></p>
+    <p><strong>Expertise:</strong> MySQL 8.x schema design, EF Core Pomelo provider, code-first migrations, indexing strategies, query optimization (EXPLAIN ANALYZE), soft deletes, audit columns, data integrity</p>
+    <p><strong>Standards:</strong> Snake_case naming, BIGINT UNSIGNED PKs, DATETIME(6) timestamps, global query filters for soft delete</p>
+</div>
+
+<div class="agent-card agent-uiux">
+    <h4>&#x1F3A8; UI/UX Designer Agent <span class="badge badge-expert">Senior Product Designer</span></h4>
+    <p><strong>File:</strong> <code>.claude/agents/uiux-designer.md</code></p>
+    <p><strong>Expertise:</strong> Modern web design, Angular Material 3+ component specs, Tailwind CSS utilities, responsive mobile-first layouts, design systems, color theory, WCAG 2.1 AA accessibility, user flow diagrams</p>
+    <p><strong>Outputs:</strong> Component specs with Angular Material + Tailwind classes, all states (default/loading/empty/error/success), responsive breakpoints, Angular component mapping</p>
+</div>
+
+<div class="agent-card agent-reviewer">
+    <h4>&#x1F50D; Reviewer Agent <span class="badge badge-expert">Senior Staff Engineer</span></h4>
+    <p><strong>File:</strong> <code>.claude/agents/reviewer.md</code></p>
+    <p><strong>Expertise:</strong> Cross-stack code review (C#, TypeScript, MySQL, HTML), security audit, OWASP Top 10, bug detection, performance analysis, SOLID compliance, test quality assessment</p>
+    <p><strong>Categories:</strong> Security &#x2022; Bugs &#x2022; Performance &#x2022; Architecture &#x2022; Testing &mdash; Severity: Critical, High, Medium, Low, Info</p>
+</div>
+
+<div class="agent-card agent-tester">
+    <h4>&#x1F9EA; Tester Agent <span class="badge badge-expert">Senior QA Automation Engineer</span></h4>
+    <p><strong>File:</strong> <code>.claude/agents/tester.md</code></p>
+    <p><strong>Expertise:</strong> xUnit + Moq + FluentAssertions (backend), Jasmine/Karma + Angular Testing Library (frontend), WebApplicationFactory (API integration), Playwright + Page Object Model (E2E), 80%+ coverage enforcement</p>
+    <p><strong>Three modes:</strong> Chunk unit tests, feature-wide API tests, feature-wide E2E tests</p>
+</div>
+
+<div class="agent-card agent-docs">
+    <h4>&#x1F4DD; Docs Agent <span class="badge badge-expert">Principal Technical Writer</span></h4>
+    <p><strong>File:</strong> <code>.claude/agents/docs.md</code></p>
+    <p><strong>Output:</strong> Self-contained <strong>HTML files</strong> saved locally to <code>docs/[feature-name]/</code> &mdash; opens directly in any browser</p>
+    <p><strong>Two modes:</strong> Pre-implementation (Architecture, API Spec, Technical Design) and Post-implementation (Summary, Coverage, API Docs, Release Notes, <strong>Deployment Instructions</strong>, Retrospective)</p>
+</div>
+
+<div class="agent-card agent-github">
+    <h4>&#x1F4E6; GitHub Agent <span class="badge badge-expert">Senior DevOps Engineer</span></h4>
+    <p><strong>File:</strong> <code>.claude/agents/github.md</code></p>
+    <p><strong>Expertise:</strong> Git branching strategies (GitFlow, GitHub Flow), conventional commits, semantic versioning, pull request best practices, CI/CD integration</p>
+    <p><strong>&#x26A0;&#xFE0F; Confirmation gate:</strong> Lead Agent always asks you before stage, commit, or push</p>
+</div>
+
+<div class="agent-card agent-vercel">
+    <h4>&#x1F680; Vercel Agent <span class="badge badge-expert">Senior Platform Engineer</span></h4>
+    <p><strong>File:</strong> <code>.claude/agents/vercel.md</code></p>
+    <p><strong>Expertise:</strong> Vercel deployment, vercel.json configuration, environment variables, preview/production environments, edge caching, security headers, rollback strategies</p>
+    <p><strong>&#x26A0;&#xFE0F; Confirmation gate:</strong> Lead Agent always asks you before preview AND production deployment</p>
+</div>
+
+<h2 id="prerequisites">3. Prerequisites</h2>
+
+<table>
+    <tr><th>Requirement</th><th>Version</th><th>How to Check</th></tr>
+    <tr><td>.NET SDK</td><td>6.0+</td><td><code>dotnet --version</code></td></tr>
+    <tr><td>Node.js</td><td>18+</td><td><code>node --version</code></td></tr>
+    <tr><td>Angular CLI</td><td>19+</td><td><code>ng version</code></td></tr>
+    <tr><td>MySQL</td><td>8.x</td><td><code>mysql --version</code></td></tr>
+    <tr><td>Claude Code CLI</td><td>Latest</td><td><code>claude --version</code></td></tr>
+    <tr><td>Git</td><td>Any recent</td><td><code>git --version</code></td></tr>
+    <tr><td>Atlassian MCP</td><td>Optional</td><td>For Jira/Confluence integration</td></tr>
+    <tr><td>Vercel CLI</td><td>Latest</td><td><code>vercel --version</code> (install: <code>npm i -g vercel</code>)</td></tr>
+</table>
+
+<div class="warning-box">
+    <strong>&#x26A0;&#xFE0F; Important:</strong> The <code>claude -p</code> command (print/headless mode) is required for spawning sub-agents. Test it:
+    <pre><code>claude -p "Say hello"</code></pre>
+</div>
+
+<h2 id="setup">4. Setup Instructions</h2>
+
+<div class="step">
+    <h3><span class="step-number">1</span>Extract the Package</h3>
+    <pre><code>cd /path/to/your/fullstack-project
+unzip multi-agent-fullstack-claude-code.zip -d .</code></pre>
+</div>
+
+<div class="step">
+    <h3><span class="step-number">2</span>Customize CLAUDE.md</h3>
+    <p>Open <code>CLAUDE.md</code> and update these project-specific values:</p>
+    <pre><code># Update these for YOUR project:
+- **Build (Backend)**: dotnet build       # &#x2190; your backend build command
+- **Build (Frontend)**: ng build          # &#x2190; your frontend build command
+- **Test (Backend)**: dotnet test         # &#x2190; your backend test command
+- **Test (Frontend)**: ng test ...        # &#x2190; your frontend test command</code></pre>
+</div>
+
+<div class="step">
+    <h3><span class="step-number">3</span>Customize Agent Definitions (Optional)</h3>
+    <p>Each agent in <code>.claude/agents/</code> has a <strong>Rules</strong> section you can customize:</p>
+    <ul>
+        <li>Add your team's naming conventions</li>
+        <li>Add project-specific architecture patterns</li>
+        <li>Add references to your existing code standards documents</li>
+        <li>Adjust testing thresholds (default is 80% coverage)</li>
+    </ul>
+</div>
+
+<div class="step">
+    <h3><span class="step-number">4</span>Verify Setup</h3>
+    <pre><code>claude
+/help</code></pre>
+    <p>You should see these commands:</p>
+    <pre><code>/orchestrate    /agent-plan       /agent-design
+/agent-design-docs  /agent-build  /agent-review
+/agent-test     /agent-api-tests  /agent-e2e-tests
+/agent-final-docs   /agent-commit /agent-deploy
+/agent-status</code></pre>
+    <div class="success-box">
+        <strong>&#x2705; Success:</strong> If you see all 13 commands, setup is complete!
+    </div>
+</div>
+
+<h2 id="folder-structure">5. Folder Structure</h2>
+
+<pre><code>your-project/
+&#x251C;&#x2500;&#x2500; .claude/
+&#x2502;   &#x251C;&#x2500;&#x2500; agents/                    # 10 specialized agent definitions
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; planner.md              # Feature planning &amp; task breakdown
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; angular-expert.md       # Angular 19+ / Angular Material 3+ / TypeScript / RxJS
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; dotnet-architect.md     # ASP.NET Core 6 / EF Core / Clean Arch
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; database-engineer.md    # MySQL 8 / Migrations / Optimization
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; uiux-designer.md        # UI/UX / Tailwind / Accessibility
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; reviewer.md             # Cross-stack code review
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; tester.md               # Unit / API / E2E testing
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; docs.md                 # HTML design &amp; implementation docs
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; github.md               # Git workflow, commits, branching
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; vercel.md               # Vercel deployment &amp; config
+&#x2502;   &#x251C;&#x2500;&#x2500; commands/                  # 13 slash commands
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; orchestrate.md          # Full automated pipeline
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-plan.md           # Interview + spec generation
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-design.md         # UI/UX design specs
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-design-docs.md    # Architecture docs (HTML, pre-impl)
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-build.md          # Layer-routed implementation
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-review.md         # Cross-stack code review
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-test.md           # Chunk unit test verification
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-api-tests.md      # Feature-wide API tests
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-e2e-tests.md      # Feature-wide E2E tests
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-final-docs.md     # Post-impl docs (HTML + deployment)
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-commit.md         # &#x26A0;&#xFE0F; Git stage/commit/push (asks first)
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; agent-deploy.md         # &#x26A0;&#xFE0F; Vercel deployment (asks first)
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; agent-status.md         # Progress dashboard
+&#x2502;   &#x2514;&#x2500;&#x2500; skills/                    # 8 reusable generation patterns
+&#x2502;       &#x251C;&#x2500;&#x2500; angular-component-gen.md   # Component/service/signal templates
+&#x2502;       &#x251C;&#x2500;&#x2500; dotnet-api-gen.md          # Controller/handler/repo templates
+&#x2502;       &#x251C;&#x2500;&#x2500; mysql-schema-gen.md        # Entity/config/migration templates
+&#x2502;       &#x251C;&#x2500;&#x2500; test-generation.md         # xUnit + Jasmine test templates
+&#x2502;       &#x251C;&#x2500;&#x2500; uiux-design-system.md      # Tailwind component library
+&#x2502;       &#x251C;&#x2500;&#x2500; code-review-checklist.md   # Cross-stack review checklist
+&#x2502;       &#x251C;&#x2500;&#x2500; jira-content-gen.md        # Epic &amp; story templates
+&#x2502;       &#x2514;&#x2500;&#x2500; html-doc-gen.md            # HTML document templates &amp; styling
+&#x251C;&#x2500;&#x2500; claude-notes/
+&#x2502;   &#x251C;&#x2500;&#x2500; agent-log.md               # Activity log for all agent runs
+&#x2502;   &#x2514;&#x2500;&#x2500; features/                  # Feature specs &amp; tracking
+&#x251C;&#x2500;&#x2500; docs/                          # Generated HTML documentation
+&#x251C;&#x2500;&#x2500; CLAUDE.md                      # Project config &amp; agent instructions
+&#x251C;&#x2500;&#x2500; QUICK-START.md                 # Quick reference card
+&#x2514;&#x2500;&#x2500; (your existing project files)</code></pre>
+
+<h2 id="lifecycle">6. Development Lifecycle</h2>
+
+<div class="info-box" style="background: #E3FCEF; border-left: 4px solid #36B37E;">
+    <strong>&#x1F504; End-to-End Lifecycle &mdash; Follow this order:</strong>
+    <ol style="margin-top: 10px;">
+        <li><strong>Plan</strong> (<code>/agent-plan</code>) &#x2192; Interview + spec + approval loop</li>
+        <li><strong>UI/UX Design</strong> (<code>/agent-design</code>) &#x2192; Screen specs with Tailwind classes &mdash; <em>if feature has UI</em></li>
+        <li><strong>Design Docs</strong> (<code>/agent-design-docs</code>) &#x2192; HTML files: Architecture, API Spec, Technical Design &mdash; <em>BEFORE coding</em></li>
+        <li><strong>Chunk Loop</strong> (repeat per chunk):
+            <ul>
+                <li><code>/agent-build</code> &#x2192; Routes to DB Engineer / DotNet Architect / Angular Expert per task layer</li>
+                <li><code>/agent-review</code> &#x2192; Cross-stack review (security, bugs, quality, perf, tests)</li>
+                <li><code>/agent-test</code> &#x2192; Unit test verification + coverage check</li>
+            </ul>
+        </li>
+        <li><strong>API Tests</strong> (<code>/agent-api-tests</code>) &#x2192; Feature-wide integration tests &mdash; <em>AFTER all chunks</em></li>
+        <li><strong>E2E Tests</strong> (<code>/agent-e2e-tests</code>) &#x2192; Feature-wide Playwright tests &mdash; <em>AFTER all chunks</em></li>
+        <li><strong>Final Docs</strong> (<code>/agent-final-docs</code>) &#x2192; HTML files: Summary, coverage, API docs, release notes, <strong>deployment instructions</strong>, retro</li>
+        <li><strong>Git Commit</strong> (<code>/agent-commit</code>) &#x2192; &#x26A0;&#xFE0F; <em>Asks you before stage, commit, and push</em></li>
+        <li><strong>Deploy</strong> (<code>/agent-deploy</code>) &#x2192; &#x26A0;&#xFE0F; <em>Asks you before preview AND production deployment to Vercel</em></li>
+    </ol>
+</div>
+
+<h2 id="commands">7. Available Commands</h2>
+
+<table>
+    <tr><th>Command</th><th>Agent(s)</th><th>Purpose</th><th>Example</th></tr>
+    <tr><td><code>/orchestrate</code></td><td>All</td><td>Full automated pipeline</td><td><code>/orchestrate user-mgmt</code></td></tr>
+    <tr><td><code>/agent-plan</code></td><td>Planner</td><td>Interview &#x2192; Spec &#x2192; Tasks</td><td><code>/agent-plan user-mgmt</code></td></tr>
+    <tr><td><code>/agent-design</code></td><td>UI/UX</td><td>Screen + component design specs</td><td><code>/agent-design user-mgmt</code></td></tr>
+    <tr><td><code>/agent-design-docs</code></td><td>Docs</td><td>Pre-impl architecture docs</td><td><code>/agent-design-docs user-mgmt</code></td></tr>
+    <tr><td><code>/agent-build</code></td><td>DB + .NET + Angular</td><td>Build chunk (routes by layer)</td><td><code>/agent-build user-mgmt T01 to T04</code></td></tr>
+    <tr><td><code>/agent-review</code></td><td>Reviewer</td><td>Cross-stack code review</td><td><code>/agent-review user-mgmt chunk-1</code></td></tr>
+    <tr><td><code>/agent-test</code></td><td>Tester</td><td>Chunk unit test verification</td><td><code>/agent-test user-mgmt chunk-1</code></td></tr>
+    <tr><td><code>/agent-api-tests</code></td><td>Tester</td><td>Feature-wide API tests</td><td><code>/agent-api-tests user-mgmt</code></td></tr>
+    <tr><td><code>/agent-e2e-tests</code></td><td>Tester</td><td>Feature-wide E2E tests</td><td><code>/agent-e2e-tests user-mgmt</code></td></tr>
+    <tr><td><code>/agent-final-docs</code></td><td>Docs</td><td>Post-impl HTML docs + deployment instructions</td><td><code>/agent-final-docs user-mgmt</code></td></tr>
+    <tr><td><code>/agent-commit</code></td><td>GitHub</td><td>&#x26A0;&#xFE0F; Git stage, commit, push (asks first)</td><td><code>/agent-commit user-mgmt</code></td></tr>
+    <tr><td><code>/agent-deploy</code></td><td>Vercel</td><td>&#x26A0;&#xFE0F; Vercel preview + production (asks first)</td><td><code>/agent-deploy user-mgmt</code></td></tr>
+    <tr><td><code>/agent-status</code></td><td>Lead</td><td>Progress dashboard</td><td><code>/agent-status user-mgmt</code></td></tr>
+</table>
+
+<h2 id="workflow">8. Step-by-Step Workflow</h2>
+
+<div class="phase-header"><h3>Phase 1: Plan the Feature</h3></div>
+<div class="phase-content">
+    <pre><code>/agent-plan user-management</code></pre>
+    <p>The Lead Agent asks you 13 questions across 5 rounds (Context, Requirements, UI, Constraints, Confirmation). Your answers are passed to the Planner Agent which generates the full spec and task breakdown.</p>
+    <p><strong>Approval loop:</strong> Review the plan, give feedback ("split T02", "add caching"), or say <strong>"approved"</strong> to lock it.</p>
+</div>
+
+<div class="phase-header"><h3>Phase 2: UI/UX Design (if feature has UI)</h3></div>
+<div class="phase-content">
+    <pre><code>/agent-design user-management</code></pre>
+    <p>The UI/UX Designer creates component specs with exact Tailwind CSS classes, all states (loading, empty, error, success), responsive breakpoints, and accessibility requirements. These specs guide the Angular Expert during implementation.</p>
+</div>
+
+<div class="phase-header"><h3>Phase 3: Design Documents (HTML)</h3></div>
+<div class="phase-content">
+    <pre><code>/agent-design-docs user-management</code></pre>
+    <p>Generates three self-contained HTML files in <code>docs/user-management/</code>: Architecture Design, API Specification, and Technical Design. Open directly in any browser. Stakeholders review these before coding starts.</p>
+</div>
+
+<div class="phase-header"><h3>Phase 4: Build &#x2192; Review &#x2192; Test (per chunk)</h3></div>
+<div class="phase-content">
+    <pre><code># Build chunk 1 (DB + API tasks)
+/agent-build user-management T01 to T03
+
+# Review chunk 1 files
+/agent-review user-management chunk-1
+
+# Verify chunk 1 unit tests
+/agent-test user-management chunk-1
+
+# Build chunk 2 (UI tasks)
+/agent-build user-management T04 to T06
+
+# Review + Test chunk 2
+/agent-review user-management chunk-2
+/agent-test user-management chunk-2</code></pre>
+    <p>The build command automatically routes <code>[DB]</code> tasks to Database Engineer, <code>[API]</code> tasks to DotNet Architect, and <code>[UI]</code> tasks to Angular Expert.</p>
+</div>
+
+<div class="phase-header"><h3>Phase 5: Feature-Wide API &amp; E2E Tests</h3></div>
+<div class="phase-content">
+    <pre><code>/agent-api-tests user-management
+/agent-e2e-tests user-management</code></pre>
+    <p>Runs only after ALL chunks are complete. Tests cross-component integration and end-to-end user flows.</p>
+</div>
+
+<div class="phase-header"><h3>Phase 6: Final Documentation (HTML)</h3></div>
+<div class="phase-content">
+    <pre><code>/agent-final-docs user-management</code></pre>
+    <p>Generates six self-contained HTML files in <code>docs/user-management/</code>: implementation summary, test coverage, API docs, release notes, <strong>deployment instructions</strong> (DB migrations + backend + Vercel frontend + rollback plan), and retrospective &mdash; all based on what was ACTUALLY built.</p>
+</div>
+
+<div class="phase-header"><h3>Phase 7: Git Commit &amp; Push (&#x26A0;&#xFE0F; asks you first)</h3></div>
+<div class="phase-content">
+    <pre><code>/agent-commit user-management</code></pre>
+    <p>The Lead Agent shows you the exact files to stage, the commit messages (conventional commit format), and the branch name. <strong>You must explicitly approve each step</strong> &mdash; branch creation, staging, each commit, and push. Nothing happens without your "yes".</p>
+</div>
+
+<div class="phase-header"><h3>Phase 8: Deploy to Vercel (&#x26A0;&#xFE0F; asks you first)</h3></div>
+<div class="phase-content">
+    <pre><code>/agent-deploy user-management</code></pre>
+    <p>The Lead Agent shows you the pre-deployment checklist and generates <code>vercel.json</code>. <strong>You must explicitly approve</strong> both preview deployment and production deployment. If anything fails, the agent stops and shows you the error.</p>
+</div>
+
+<div class="phase-header"><h3>Phase 9: Final Status</h3></div>
+<div class="phase-content">
+    <pre><code>/agent-status user-management</code></pre>
+    <p>Shows complete feature dashboard: all 9 phases, chunk status, task status, documentation, git commits, and deployment state.</p>
+    <div class="success-box"><strong>&#x1F389; Done!</strong> Full-stack feature complete &mdash; designed, built, tested, documented, committed, and deployed.</div>
+</div>
+
+<h2 id="skills">9. Skills Library</h2>
+
+<table>
+    <tr><th>Skill</th><th>File</th><th>Used By</th><th>Purpose</th></tr>
+    <tr><td>Angular Components</td><td><code>angular-component-gen.md</code></td><td>Angular Expert</td><td>Smart/Dumb component, service, signal templates</td></tr>
+    <tr><td>.NET API</td><td><code>dotnet-api-gen.md</code></td><td>DotNet Architect</td><td>Controller, CQRS handler, repository templates</td></tr>
+    <tr><td>MySQL Schema</td><td><code>mysql-schema-gen.md</code></td><td>Database Engineer</td><td>Entity, EF config, migration, data type mapping</td></tr>
+    <tr><td>Test Generation</td><td><code>test-generation.md</code></td><td>Tester</td><td>xUnit + Jasmine test patterns with coverage checklist</td></tr>
+    <tr><td>Design System</td><td><code>uiux-design-system.md</code></td><td>UI/UX Designer</td><td>Tailwind component library (buttons, forms, tables, etc.)</td></tr>
+    <tr><td>Review Checklist</td><td><code>code-review-checklist.md</code></td><td>Reviewer</td><td>Cross-stack review checklist (backend, frontend, DB, tests)</td></tr>
+    <tr><td>Jira Content</td><td><code>jira-content-gen.md</code></td><td>Lead Agent</td><td>Epic and story templates for Atlassian MCP</td></tr>
+    <tr><td>HTML Documentation</td><td><code>html-doc-gen.md</code></td><td>Docs Agent</td><td>Self-contained HTML document templates &amp; styling</td></tr>
+</table>
+
+<h2 id="confirmation-gates">10. Confirmation Gates</h2>
+
+<div class="warning-box">
+    <strong>&#x26A0;&#xFE0F; The Lead Agent ALWAYS asks you before these operations:</strong>
+    <table style="margin-top: 12px;">
+        <tr><th>Operation</th><th>Command</th><th>What the Lead Agent Shows You</th></tr>
+        <tr><td><strong>Git branch creation</strong></td><td><code>/agent-commit</code></td><td>Branch name, base branch</td></tr>
+        <tr><td><strong>Git stage</strong></td><td><code>/agent-commit</code></td><td>Exact list of files per chunk</td></tr>
+        <tr><td><strong>Git commit</strong></td><td><code>/agent-commit</code></td><td>Full commit message (conventional format)</td></tr>
+        <tr><td><strong>Git push</strong></td><td><code>/agent-commit</code></td><td>Branch name, number of commits, remote</td></tr>
+        <tr><td><strong>Vercel preview deploy</strong></td><td><code>/agent-deploy</code></td><td>Pre-deployment checklist, environment variables</td></tr>
+        <tr><td><strong>Vercel production deploy</strong></td><td><code>/agent-deploy</code></td><td>Preview URL to verify first, production URL</td></tr>
+    </table>
+    <p style="margin-top: 12px;">You can say <strong>"yes"</strong> to proceed, give <strong>feedback</strong> to adjust, or say <strong>"skip"</strong> to skip that phase entirely. These gates apply even when using <code>/orchestrate</code> for the fully automated pipeline.</p>
+</div>
+
+<h2 id="compatibility">11. Compatibility with Existing SDLC</h2>
+
+<p>If you already have the <strong>SDLC package</strong> (from the DotNet Setup Guide), this package <strong>adds to it</strong> &mdash; no conflicts:</p>
+
+<table>
+    <tr><th>Multi-Agent Command</th><th>Equivalent SDLC Command</th><th>Key Difference</th></tr>
+    <tr><td><code>/agent-plan</code></td><td><code>/spec-feature</code></td><td>Spawns Planner sub-agent for autonomous spec generation</td></tr>
+    <tr><td><code>/agent-build</code></td><td><code>/task-implement</code></td><td>Routes to layer-specific expert agents (DB, API, UI)</td></tr>
+    <tr><td><code>/agent-review</code></td><td><code>/task-review-code</code></td><td>Cross-stack review with auto-fix loop</td></tr>
+    <tr><td><code>/agent-test</code></td><td><code>/task-verify</code></td><td>Dedicated testing agent with 3 modes</td></tr>
+    <tr><td><code>/agent-commit</code></td><td><em>(no equivalent)</em></td><td>GitHub Agent with conventional commits + user confirmation gates</td></tr>
+    <tr><td><code>/agent-deploy</code></td><td><em>(no equivalent)</em></td><td>Vercel Agent with preview/production + user confirmation gates</td></tr>
+    <tr><td><code>/orchestrate</code></td><td><em>(no equivalent)</em></td><td>Full autonomous pipeline with all 10 agents</td></tr>
+</table>
+
+<div class="info-box">
+    <strong>&#x1F4A1; Tip:</strong> Mix and match! Use <code>/agent-plan</code> for autonomous planning, then switch to <code>/task-implement</code> if you prefer manual control over implementation.
+</div>
+
+<h2 id="best-practices">12. Best Practices</h2>
+
+<h3>&#x2705; Getting Started</h3>
+<ul>
+    <li>Use <strong>phase-by-phase</strong> commands first before trying <code>/orchestrate</code></li>
+    <li>Always review the Planner's output before approving</li>
+    <li>Check <code>claude-notes/agent-log.md</code> after each run</li>
+</ul>
+
+<h3>&#x2705; Task Organization</h3>
+<ul>
+    <li>Order tasks by dependency: <strong>Database &#x2192; Backend API &#x2192; Frontend UI</strong></li>
+    <li>Keep chunks to 3-5 tasks max for manageable review cycles</li>
+    <li>For large features (10+ tasks), split into sub-features</li>
+</ul>
+
+<h3>&#x2705; Context Window Management</h3>
+<ul>
+    <li>Sub-agents run in <strong>separate context windows</strong> via <code>claude -p</code></li>
+    <li>Build in batches for large features: T01-T04 then T05-T08</li>
+    <li>Use <code>/agent-status</code> to resume after breaks</li>
+</ul>
+
+<h3>&#x2705; Customizing for Your Team</h3>
+<ul>
+    <li>Edit agent <code>.md</code> files to add your team's conventions and rules</li>
+    <li>Update <code>CLAUDE.md</code> with your specific build/test/lint commands</li>
+    <li>Add project-specific patterns to the skills library</li>
+</ul>
+
+<h2 id="troubleshooting">13. Troubleshooting</h2>
+
+<table>
+    <tr><th>Problem</th><th>Solution</th></tr>
+    <tr><td><code>claude -p</code> not found</td><td>Update CLI: <code>npm update -g @anthropic-ai/claude-code</code></td></tr>
+    <tr><td>Agent commands not in <code>/help</code></td><td>Verify <code>.claude/commands/agent-*.md</code> files exist in project root</td></tr>
+    <tr><td>Sub-agent produces wrong layer code</td><td>Check task spec has correct <code>[DB]</code>/<code>[API]</code>/<code>[UI]</code> layer tag</td></tr>
+    <tr><td>Build fails after agent code</td><td>Lead Agent retries 2x automatically. If still failing, run manually and provide error to agent</td></tr>
+    <tr><td>Angular tests fail</td><td>Run <code>ng test --watch=false --browsers=ChromeHeadless</code> manually for details</td></tr>
+    <tr><td>.NET tests fail</td><td>Run <code>dotnet test --verbosity detailed</code> for full output</td></tr>
+    <tr><td>Coverage below 80%</td><td>Run <code>/agent-test</code> again &mdash; Tester Agent generates missing tests</td></tr>
+    <tr><td>Reviewer too many false positives</td><td>Adjust severity thresholds in <code>.claude/agents/reviewer.md</code></td></tr>
+    <tr><td>Git merge conflicts</td><td>Agent stops and reports to you &mdash; resolve manually, then re-run <code>/agent-commit</code></td></tr>
+    <tr><td><code>vercel</code> CLI not found</td><td>Install: <code>npm i -g vercel</code>, then <code>vercel login</code></td></tr>
+    <tr><td>Vercel deploy fails</td><td>Agent captures error log and shows it to you. Check <code>vercel.json</code> config and environment variables</td></tr>
+    <tr><td>Vercel env vars missing</td><td>Set in Vercel Dashboard or via <code>vercel env add [NAME] [ENVIRONMENT]</code></td></tr>
+    <tr><td>Jira/Confluence fails</td><td>Configure Atlassian MCP in Claude Code settings</td></tr>
+    <tr><td>Feature not found</td><td>Check folder exists in <code>claude-notes/features/[YYYY-MM]-[name]</code></td></tr>
+</table>
+
+<hr>
+
+<div class="info-box">
+    <strong>&#x1F4CE; Attachment:</strong> <code>multi-agent-fullstack-claude-code.zip</code><br>
+    Extract to your project root. Contains: 10 agents, 13 commands, 8 skills, CLAUDE.md, QUICK-START.md
+</div>
+
+<p><em>Last updated: February 2026</em></p>
+
+</body>
+</html>

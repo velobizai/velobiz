@@ -1,0 +1,129 @@
+:host {
+  display: block;
+}
+
+.client-logos {
+  padding: 60px 0;
+  background: var(--color-bg-primary);
+  overflow: hidden;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-bottom: 3rem;
+  }
+
+  &__track-wrapper {
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+
+  &__track {
+    display: flex;
+    gap: 4rem;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.client-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-width: 150px;
+  padding: 1.5rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: all 300ms ease;
+
+  &:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  &__icon {
+    font-size: 48px;
+  }
+
+  &__name {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-text-primary);
+    text-align: center;
+  }
+}
+
+// Mobile Responsiveness
+@media (max-width: 768px) {
+  .client-logos {
+    padding: 40px 0;
+
+    &__track {
+      gap: 2rem;
+    }
+  }
+
+  .client-logo {
+    min-width: 120px;
+    padding: 1rem;
+
+    &__icon {
+      font-size: 36px;
+    }
+
+    &__name {
+      font-size: 12px;
+    }
+  }
+}
+
+// Reduced Motion Support
+@media (prefers-reduced-motion: reduce) {
+  .client-logos__track {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .client-logo {
+    transition-duration: 0.01ms !important;
+
+    &:hover {
+      transform: none !important;
+    }
+  }
+}

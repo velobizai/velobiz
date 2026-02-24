@@ -1,0 +1,112 @@
+.service-card {
+  position: relative;
+  padding: 32px;
+  background: #14141a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    @media (hover: hover) {
+      transform: translateY(-8px);
+      border-color: rgba(0, 229, 160, 0.3);
+      box-shadow: 0 16px 48px rgba(0, 229, 160, 0.2);
+      background: #1a1a22;
+
+      .card-icon .icon-emoji {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &:focus {
+    outline: 2px solid #00e5a0;
+    outline-offset: 4px;
+  }
+
+  &.expanded {
+    @media (max-width: 767px) {
+      border-color: rgba(0, 229, 160, 0.3);
+      box-shadow: 0 8px 24px rgba(0, 229, 160, 0.2);
+    }
+  }
+
+  .card-icon {
+    margin-bottom: 24px;
+
+    .icon-emoji {
+      display: block;
+      font-size: 48px;
+      transition: transform 0.3s ease-out;
+      line-height: 1;
+    }
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+    line-height: 1.3;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .card-description {
+    position: relative;
+    min-height: 72px;
+
+    p {
+      font-size: 16px;
+      color: #a0a0b0;
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .short-desc {
+      line-height: 1.5;
+      opacity: 1;
+      transition: opacity 0.3s ease-out;
+
+      &.hidden {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+    }
+
+    .long-desc {
+      line-height: 1.6;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease-out;
+
+      &.visible {
+        opacity: 1;
+        position: static;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  .expand-hint {
+    display: block;
+    font-size: 14px;
+    color: #707080;
+    margin-top: 16px;
+    font-style: italic;
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card .card-icon .icon-emoji,
+  .service-card .card-description p {
+    transition-duration: 0.01ms !important;
+  }
+}

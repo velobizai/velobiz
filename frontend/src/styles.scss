@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap');
+
+/* CSS Custom Properties for Design System */
+:root {
+  --color-bg-primary: #0a0a0f;
+  --color-bg-secondary: #12121a;
+  --color-bg-card: #1a1a24;
+  --color-accent: #00e5a0;
+  --color-accent-hover: #00ffc8;
+  --color-accent-rgb: 0, 229, 160;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0b0;
+  --color-text-muted: #6a6a7a;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(0, 229, 160, 0.3);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-frosted-glass: rgba(10, 10, 15, 0.8);
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Typography and Layout */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

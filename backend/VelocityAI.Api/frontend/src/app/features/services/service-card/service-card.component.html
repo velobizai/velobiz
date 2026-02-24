@@ -1,0 +1,35 @@
+<article
+  class="service-card"
+  [class.expanded]="expanded()"
+  (click)="toggleExpanded()"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  tabindex="0"
+  (keydown.enter)="toggleExpanded()"
+  (keydown.space)="toggleExpanded(); $event.preventDefault()"
+  role="button"
+  [attr.aria-label]="'Learn more about ' + service.title"
+  [attr.aria-expanded]="expanded()"
+>
+  <div class="card-icon">
+    <span class="icon-emoji" [attr.aria-hidden]="true">{{ getIconEmoji() }}</span>
+  </div>
+
+  <h3 class="card-title">{{ service.title }}</h3>
+
+  <div class="card-description">
+    <p class="short-desc" [class.hidden]="expanded()">
+      {{ service.shortDescription }}
+    </p>
+    
+    <p class="long-desc" [class.visible]="expanded()">
+      {{ service.longDescription }}
+    </p>
+  </div>
+
+  @if (isMobile()) {
+    <span class="expand-hint">
+      {{ expanded() ? 'Tap to collapse' : 'Tap for details' }}
+    </span>
+  }
+</article>

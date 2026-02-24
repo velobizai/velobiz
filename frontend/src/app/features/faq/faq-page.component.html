@@ -1,0 +1,82 @@
+<main class="faq-page">
+  <!-- Hero Section -->
+  <section class="faq-hero">
+    <div class="faq-hero__content">
+      <h1 class="faq-hero__headline">Frequently Asked Questions</h1>
+      <p class="faq-hero__subheading">
+        Everything you need to know about our AI automation services
+      </p>
+    </div>
+  </section>
+
+  <!-- Loading State -->
+  @if (loading()) {
+    <section class="faq-loading">
+      <div class="loading-spinner"></div>
+      <p>Loading FAQs...</p>
+    </section>
+  }
+
+  <!-- Error State -->
+  @if (error() && !loading()) {
+    <section class="faq-error">
+      <p class="error-message">{{ error() }}</p>
+      <button class="retry-button" (click)="retry()">Retry</button>
+    </section>
+  }
+
+  <!-- FAQ Accordion -->
+  @if (!loading() && !error() && faqs().length > 0) {
+    <section class="faq-accordion">
+      <div class="faq-accordion__container">
+        @for (faq of faqs(); track faq.id; let i = $index) {
+          <article
+            class="faq-item"
+            [class.faq-item--expanded]="expandedIndex() === i"
+            appScrollReveal>
+            
+            <button
+              class="faq-item__trigger"
+              (click)="toggleFaq(i)"
+              [attr.aria-expanded]="expandedIndex() === i"
+              [attr.aria-controls]="'faq-answer-' + faq.id">
+              
+              <h2 class="faq-item__question">{{ faq.question }}</h2>
+              
+              <span class="faq-item__icon" [class.faq-item__icon--expanded]="expandedIndex() === i">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </button>
+
+            <div
+              class="faq-item__answer"
+              [id]="'faq-answer-' + faq.id"
+              [attr.aria-hidden]="expandedIndex() !== i"
+              role="region">
+              <div class="faq-item__answer-content">
+                <p>{{ faq.answer }}</p>
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+  }
+
+  <!-- CTA Section -->
+  @if (!loading()) {
+    <section class="faq-cta">
+      <div class="faq-cta__content">
+        <h2 class="faq-cta__headline">Still have questions?</h2>
+        <p class="faq-cta__subtext">
+          Schedule a free consultation with our team to discuss your specific needs
+        </p>
+        <button class="faq-cta__button" routerLink="/contact">
+          Contact Us
+        </button>
+      </div>
+    </section>
+  }
+</main>

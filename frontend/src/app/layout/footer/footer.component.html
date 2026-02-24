@@ -1,0 +1,94 @@
+<footer class="footer">
+  <div class="footer__columns">
+    <!-- Column 1: Brand -->
+    <div class="footer__column footer__column--brand">
+      <div class="footer__brand">
+        <div class="footer__logo">{{ brand.name }}</div>
+        <div class="footer__tagline">{{ brand.tagline }}</div>
+        <p class="footer__description">{{ brand.description }}</p>
+      </div>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer__column">
+      <h3 class="footer__column-heading">Quick Links</h3>
+      <ul class="footer__link-list">
+        @for (link of quickLinks; track link.route) {
+          <li>
+            <a
+              [routerLink]="link.route"
+              class="footer__link">
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <!-- Column 3: Company -->
+    <div class="footer__column">
+      <h3 class="footer__column-heading">Company</h3>
+      <ul class="footer__link-list">
+        @for (link of companyLinks; track link.route) {
+          <li>
+            <a
+              [href]="link.route"
+              class="footer__link">
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <!-- Column 4: Legal -->
+    <div class="footer__column">
+      <h3 class="footer__column-heading">Legal</h3>
+      <ul class="footer__link-list">
+        @for (link of legalLinks; track link.route) {
+          <li>
+            <a
+              [href]="link.route"
+              class="footer__link">
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer__bottom">
+    <div class="footer__social-icons">
+      <a
+        [href]="socialLinks.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__social-icon"
+        aria-label="Visit VelocityAI on LinkedIn">
+        <mat-icon>link</mat-icon>
+      </a>
+      <a
+        [href]="socialLinks.twitter"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__social-icon"
+        aria-label="Visit VelocityAI on Twitter">
+        <mat-icon>link</mat-icon>
+      </a>
+      <a
+        [href]="socialLinks.github"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__social-icon"
+        aria-label="Visit VelocityAI on GitHub">
+        <mat-icon>code</mat-icon>
+      </a>
+    </div>
+
+    <div class="footer__copyright">
+      &copy; {{ currentYear }} {{ brand.name }}. All rights reserved.
+    </div>
+  </div>
+</footer>

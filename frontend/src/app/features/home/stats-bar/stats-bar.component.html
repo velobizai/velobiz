@@ -1,0 +1,12 @@
+<section class="stats-bar" aria-labelledby="stats-heading">
+  <h2 id="stats-heading" class="sr-only">Our Track Record</h2>
+
+  <div class="stats-container">
+    <div class="stat-item" *ngFor="let stat of stats">
+      <div class="stat-value">
+        {{ getAnimatedValue(stat) }}{{ stat.suffix }}
+      </div>
+      <div class="stat-label">{{ stat.label }}</div>
+    </div>
+  </div>
+</section>
