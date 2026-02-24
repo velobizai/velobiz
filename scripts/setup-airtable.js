@@ -10,7 +10,7 @@
  */
 
 const BASE_ID = 'appHYrysGW1ozoHqS';
-const PAT = 'patr2qKFBlSRilTjW.fb3d7617fa65b588ce46a9b5707509104b1d6a0baac197ff62b67e5cc8c870d9';
+const PAT = '';
 const AIRTABLE_API_BASE = 'https://api.airtable.com/v0';
 const AIRTABLE_META_API_BASE = 'https://api.airtable.com/v0/meta/bases';
 
