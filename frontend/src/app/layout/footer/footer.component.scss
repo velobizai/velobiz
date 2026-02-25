@@ -44,6 +44,12 @@
     margin-bottom: 12px;
   }
 
+  &__logo-image {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+
   &__tagline {
     font-size: 14px;
     color: var(--color-accent);

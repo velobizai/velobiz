@@ -50,8 +50,19 @@
     }
   }
 
+  &__logo-image {
+    height: 48px;
+    width: auto;
+    display: block;
+    transition: transform 300ms ease;
+  }
+
   &--scrolled &__logo {
     transform: scale(0.9);
+  }
+
+  &--scrolled &__logo-image {
+    height: 40px;
   }
 
   &__nav-list {
