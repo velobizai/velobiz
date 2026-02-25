@@ -1,6 +1,6 @@
 /**
  * Airtable Setup Script
- * Creates tables and populates seed data for VelocityAI
+ * Creates tables and populates seed data for Velobiz
  *
  * Prerequisites:
  * - npm install node-fetch
@@ -72,7 +72,7 @@ const tableSchemas = [
   },
   {
     name: 'Services',
-    description: 'AI Services offered by VelocityAI',
+    description: 'AI Services offered by Velobiz',
     fields: [
       { name: 'Title', type: 'singleLineText' },
       { name: 'Icon', type: 'singleLineText' },
@@ -286,7 +286,7 @@ async function insertSeedData(tableName, records) {
 }
 
 async function main() {
-  console.log('🚀 Starting Airtable Setup for VelocityAI');
+  console.log('🚀 Starting Airtable Setup for Velobiz');
   console.log(`📦 Base ID: ${BASE_ID}`);
   console.log('=' .repeat(60));
 

@@ -3,13 +3,13 @@
 **Feature ID:** FEATURE-5
 **Designer:** Planner Agent (Auto-Generated)
 **Date:** 2026-02-20
-**Design System:** VelocityAI Dark Luxury Theme
+**Design System:** Velobiz Dark Luxury Theme
 
 ---
 
 ## Design Philosophy
 
-The FAQ Page embodies VelocityAI's premium, approachable brand with a dark luxury aesthetic. The accordion interaction pattern promotes **progressive disclosure**: users see all questions at a glance and expand only what's relevant to them. The design prioritizes **scanability** (clear question hierarchy) while providing **smooth, delightful animations** (expand/collapse transitions). The layout follows a **focused single-column pattern**: hero → FAQ list → CTA conversion.
+The FAQ Page embodies Velobiz's premium, approachable brand with a dark luxury aesthetic. The accordion interaction pattern promotes **progressive disclosure**: users see all questions at a glance and expand only what's relevant to them. The design prioritizes **scanability** (clear question hierarchy) while providing **smooth, delightful animations** (expand/collapse transitions). The layout follows a **focused single-column pattern**: hero → FAQ list → CTA conversion.
 
 ---
 
@@ -231,14 +231,14 @@ export class FaqPageComponent implements OnInit {
   }
 
   private setMetaTags(): void {
-    this.title.setTitle('Frequently Asked Questions | VelocityAI');
+    this.title.setTitle('Frequently Asked Questions | Velobiz');
     this.meta.updateTag({
       name: 'description',
       content: 'Get answers to common questions about AI automation, deployment timelines, security, integrations, and more.'
     });
     this.meta.updateTag({
       property: 'og:title',
-      content: 'Frequently Asked Questions | VelocityAI'
+      content: 'Frequently Asked Questions | Velobiz'
     });
     this.meta.updateTag({
       property: 'og:description',

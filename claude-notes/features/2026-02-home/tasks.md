@@ -247,7 +247,7 @@ Register the HomePageComponent on the root `/` route in Angular routing configur
 **Acceptance Criteria:**
 - ✅ Edit `frontend/src/app/app.routes.ts`
 - ✅ Add route: `{ path: '', component: HomePageComponent, title: '...' }`
-- ✅ Set page title: "VelocityAI - AI Automation that Accelerates Your Business"
+- ✅ Set page title: "Velobiz - AI Automation that Accelerates Your Business"
 - ✅ Add meta description in route data
 - ✅ Eager load (not lazy-loaded)
 - ✅ Verify route works: `ng serve` and navigate to `http://localhost:4200/`

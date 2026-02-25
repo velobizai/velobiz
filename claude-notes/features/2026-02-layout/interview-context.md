@@ -10,7 +10,7 @@
 
 ### Q1: What is the business problem this feature solves? Who are the target users?
 
-The Navbar and Footer provide consistent navigation and branding across all pages of the VelocityAI website, solving the fundamental UX problem of site navigation and wayfinding.
+The Navbar and Footer provide consistent navigation and branding across all pages of the Velobiz website, solving the fundamental UX problem of site navigation and wayfinding.
 
 **Target users:**
 - **Potential clients** browsing AI automation services
@@ -78,7 +78,7 @@ The Navbar and Footer provide consistent navigation and branding across all page
 - ✅ Company column: About, Careers, Blog (placeholder links)
 - ✅ Legal column: Privacy Policy, Terms of Service, Cookie Policy
 - ✅ Social media icons row: LinkedIn, Twitter, GitHub
-- ✅ Copyright notice: "© 2026 VelocityAI. All rights reserved."
+- ✅ Copyright notice: "© 2026 Velobiz. All rights reserved."
 - ✅ Responsive layout: 4 columns (desktop) → 2 columns (tablet) → 1 column (mobile)
 
 ### Q5: What data does this feature create, read, update, or delete? Describe the entities.
@@ -155,7 +155,7 @@ const FOOTER_COLUMNS = {
 ### Q8: What UI components are needed?
 
 **Navbar Components:**
-- Logo image + text "VelocityAI" (clickable, routes to `/`)
+- Logo image + text "Velobiz" (clickable, routes to `/`)
 - Desktop: Horizontal menu with 5 nav links
 - Mobile: Hamburger icon (Material `mat-icon`: "menu")
 - Mobile side drawer: Angular Material `MatSidenav` (slide-in from right, backdrop overlay)
@@ -308,7 +308,7 @@ const FOOTER_COLUMNS = {
 **2. Navbar Logo Behavior:**
 - Logo should be clickable and route to `/` (homepage)
 - Logo can scale down to **90% size** when navbar shrinks on scroll (smooth transition)
-- Logo text "VelocityAI" uses `Playfair Display` serif font
+- Logo text "Velobiz" uses `Playfair Display` serif font
 
 **3. Mobile Menu UX:**
 - Clicking a nav link **closes the mobile menu** automatically (navigate + close animation)

@@ -31,7 +31,7 @@ When testing is enabled, this feature will include:
 
 ### 1. Repository Tests
 
-**File:** `backend/VelocityAI.Api.Tests/Repositories/FaqRepositoryTests.cs`
+**File:** `backend/Velobiz.Api.Tests/Repositories/FaqRepositoryTests.cs`
 
 **Test Cases:**
 
@@ -67,7 +67,7 @@ public async Task GetAllActiveAsync_ReturnsAllActiveFaqs()
 
 ### 2. Service Layer Tests
 
-**File:** `backend/VelocityAI.Api.Tests/Services/FaqServiceTests.cs`
+**File:** `backend/Velobiz.Api.Tests/Services/FaqServiceTests.cs`
 
 **Test Cases:**
 
@@ -105,7 +105,7 @@ public async Task GetAllActiveFaqsAsync_CallsRepository()
 
 ### 3. Controller Tests
 
-**File:** `backend/VelocityAI.Api.Tests/Controllers/FaqsControllerTests.cs`
+**File:** `backend/Velobiz.Api.Tests/Controllers/FaqsControllerTests.cs`
 
 **Test Cases:**
 
@@ -148,7 +148,7 @@ public async Task GetAll_ReturnsOkWithFaqs()
 
 ### 4. Integration Tests
 
-**File:** `backend/VelocityAI.Api.Tests/Integration/FaqsApiTests.cs`
+**File:** `backend/Velobiz.Api.Tests/Integration/FaqsApiTests.cs`
 
 **Test Cases:**
 
@@ -239,7 +239,7 @@ it('should fetch FAQs from API', (done) => {
 | FC-05 | toggleFaq_ExpandsFaq | Click FAQ 1 | expandedFaqId() = 1 |
 | FC-06 | toggleFaq_CollapsesFaq | Click FAQ 1 twice | expandedFaqId() = null |
 | FC-07 | retry_CallsLoadFaqs | Click retry button | loadFaqs() called again |
-| FC-08 | setMetaTags_SetsTitle | Component init | Page title = "Frequently Asked Questions | VelocityAI" |
+| FC-08 | setMetaTags_SetsTitle | Component init | Page title = "Frequently Asked Questions | Velobiz" |
 
 **Example Test:**
 
@@ -393,10 +393,10 @@ When tests are implemented, verify:
 
 Based on the comprehensive exploration and planning, here are the 5 most critical files for implementing Feature 5: FAQ Page:
 
-1. **C:\Users\jparekh\project\RND\Agency\Website\backend\VelocityAI.Api\Repositories\FaqRepository.cs**
+1. **C:\Users\jparekh\project\RND\Agency\Website\backend\Velobiz.Api\Repositories\FaqRepository.cs**
    - Reason: Core data access logic to implement — needs GetAllActiveAsync() method to query FAQs from database
 
-2. **C:\Users\jparekh\project\RND\Agency\Website\backend\VelocityAI.Api\Controllers\FaqsController.cs**
+2. **C:\Users\jparekh\project\RND\Agency\Website\backend\Velobiz.Api\Controllers\FaqsController.cs**
    - Reason: API endpoint to implement — replace 501 stub with full implementation using service layer and ApiResponse wrapper
 
 3. **C:\Users\jparekh\project\RND\Agency\Website\frontend\src\app\core\services\faq.service.ts**

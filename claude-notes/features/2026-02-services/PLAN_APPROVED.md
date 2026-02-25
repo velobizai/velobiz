@@ -207,11 +207,11 @@ This feature is now ready for implementation. The following agents are cleared t
 ### New Files (Expected)
 
 **Backend:**
-- `backend/VelocityAI.Api/Repositories/IServicesRepository.cs`
-- `backend/VelocityAI.Api/Repositories/ServicesRepository.cs`
-- `backend/VelocityAI.Api/Services/IServicesService.cs`
-- `backend/VelocityAI.Api/Services/ServicesService.cs`
-- `backend/VelocityAI.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.cs`
+- `backend/Velobiz.Api/Repositories/IServicesRepository.cs`
+- `backend/Velobiz.Api/Repositories/ServicesRepository.cs`
+- `backend/Velobiz.Api/Services/IServicesService.cs`
+- `backend/Velobiz.Api/Services/ServicesService.cs`
+- `backend/Velobiz.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.cs`
 
 **Frontend:**
 - `frontend/src/app/core/services/services.service.ts`
@@ -226,9 +226,9 @@ This feature is now ready for implementation. The following agents are cleared t
 ### Modified Files (Expected)
 
 **Backend:**
-- `backend/VelocityAI.Api/Data/ApplicationDbContext.cs` (add seed data method)
-- `backend/VelocityAI.Api/Controllers/ServicesController.cs` (replace 501 stub)
-- `backend/VelocityAI.Api/Program.cs` (register DI services)
+- `backend/Velobiz.Api/Data/ApplicationDbContext.cs` (add seed data method)
+- `backend/Velobiz.Api/Controllers/ServicesController.cs` (replace 501 stub)
+- `backend/Velobiz.Api/Program.cs` (register DI services)
 
 **Frontend:**
 - `frontend/src/app/app.routes.ts` (add /services route)
@@ -271,7 +271,7 @@ Before marking this feature as complete, verify:
 - **Testing deferred:** Per CLAUDE.md user instruction, no tests or documentation will be written during implementation. Tests can be added later when user requests.
 - **Single chunk:** All 12 tasks will be completed in one cohesive chunk since they're sequential and interdependent.
 - **Content finalized:** All 8 service descriptions are final and ready for seed data (no pending copywriting).
-- **Design system:** Follows VelocityAI dark luxury theme from Features 0, 1, 2.
+- **Design system:** Follows Velobiz dark luxury theme from Features 0, 1, 2.
 
 ---
 

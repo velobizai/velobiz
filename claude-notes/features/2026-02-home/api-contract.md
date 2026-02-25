@@ -33,7 +33,7 @@ All routing is handled by Angular Router with client-side navigation.
 **Component:** `HomePageComponent`
 **Lazy Loading:** No (eager load as default route)
 **Route Guards:** None
-**Title:** `VelocityAI - AI Automation that Accelerates Your Business`
+**Title:** `Velobiz - AI Automation that Accelerates Your Business`
 
 **Route Definition:**
 ```typescript
@@ -42,7 +42,7 @@ export const routes: Routes = [
   {
     path: '',
     component: HomePageComponent,
-    title: 'VelocityAI - AI Automation that Accelerates Your Business',
+    title: 'Velobiz - AI Automation that Accelerates Your Business',
     data: {
       metaDescription: 'Transform your business with AI automation. 24/7 intelligent agents, instant scaling, 99% uptime. Trusted by 500+ businesses.',
       ogImage: '/assets/og-home.jpg'

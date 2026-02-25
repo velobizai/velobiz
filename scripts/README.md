@@ -51,7 +51,7 @@ node setup-airtable.js
 ## Expected Output
 
 ```
-🚀 Starting Airtable Setup for VelocityAI
+🚀 Starting Airtable Setup for Velobiz
 📦 Base ID: appHYrysGW1ozoHqS
 ============================================================
 

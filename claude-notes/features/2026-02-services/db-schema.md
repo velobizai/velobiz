@@ -17,12 +17,12 @@ This feature does NOT introduce new database tables. The `Service` entity was al
 
 ### Service Entity
 
-**File:** `backend/VelocityAI.Api/Models/Service.cs`
+**File:** `backend/Velobiz.Api/Models/Service.cs`
 
 **Entity Class (Already Exists):**
 
 ```csharp
-namespace VelocityAI.Api.Models;
+namespace Velobiz.Api.Models;
 
 public class Service
 {
@@ -77,7 +77,7 @@ CREATE TABLE `Services` (
 
 ### DbContext Configuration
 
-**File:** `backend/VelocityAI.Api/Data/ApplicationDbContext.cs`
+**File:** `backend/Velobiz.Api/Data/ApplicationDbContext.cs`
 
 **Existing DbSet:**
 
@@ -137,7 +137,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 
 ### Seed Data Method
 
-**Location:** `backend/VelocityAI.Api/Data/ApplicationDbContext.cs`
+**Location:** `backend/Velobiz.Api/Data/ApplicationDbContext.cs`
 
 **Implementation:**
 
@@ -248,13 +248,13 @@ Using static IDs (1-8) ensures:
 **Command to Generate:**
 
 ```bash
-cd backend/VelocityAI.Api
+cd backend/Velobiz.Api
 dotnet ef migrations add SeedServicesData
 ```
 
 **Migration File (Auto-Generated):**
 
-`backend/VelocityAI.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.cs`
+`backend/Velobiz.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.cs`
 
 **Migration Up Method:**
 

@@ -121,7 +121,7 @@ export const FOOTER_LEGAL_LINKS: NavLink[] = [
 **Example:**
 ```typescript
 export class FooterComponent {
-  readonly companyName = 'VelocityAI';
+  readonly companyName = 'Velobiz';
   readonly tagline = 'AI Automation for Modern Businesses';
   readonly description = 'We build intelligent automation systems that scale your operations without adding headcount.';
   readonly currentYear = new Date().getFullYear();
@@ -205,7 +205,7 @@ A future feature may add a newsletter signup form in the footer. When implemente
 ---
 
 ### 6.2 Dynamic Navigation (Out of Scope)
-If VelocityAI later requires dynamic navigation (e.g., fetching nav links from a CMS), a future enhancement could add:
+If Velobiz later requires dynamic navigation (e.g., fetching nav links from a CMS), a future enhancement could add:
 
 **Endpoint:** `GET /api/navigation`
 

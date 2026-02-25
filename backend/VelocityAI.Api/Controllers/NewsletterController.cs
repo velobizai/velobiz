@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using VelocityAI.Api.DTOs;
-using VelocityAI.Api.Models;
-using VelocityAI.Api.Repositories;
+using Velobiz.Api.DTOs;
+using Velobiz.Api.Models;
+using Velobiz.Api.Repositories;
 
-namespace VelocityAI.Api.Controllers;
+namespace Velobiz.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

@@ -1,9 +1,9 @@
 using System.Net.Http.Headers;
 using System.Reflection;
-using VelocityAI.Api.Airtable;
-using VelocityAI.Api.Middleware;
-using VelocityAI.Api.Repositories;
-using VelocityAI.Api.Services;
+using Velobiz.Api.Airtable;
+using Velobiz.Api.Middleware;
+using Velobiz.Api.Repositories;
+using Velobiz.Api.Services;
 using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -60,9 +60,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
     {
-        Title = "VelocityAI API",
+        Title = "Velobiz API",
         Version = "v1",
-        Description = "Backend API for VelocityAI agency website"
+        Description = "Backend API for Velobiz agency website"
     });
 
     // Enable XML documentation
@@ -85,7 +85,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "VelocityAI API v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Velobiz API v1");
     });
 }
 

@@ -650,7 +650,7 @@ test('home page visual regression - desktop', async ({ page }) => {
 | INT-1.2 | Click hero primary CTA | Navigates to /contact route |
 | INT-1.3 | Click hero secondary CTA | Navigates to /services route |
 | INT-1.4 | Click CTA banner button | Navigates to /contact route |
-| INT-1.5 | Page title is set correctly | Document title is "VelocityAI - AI Automation..." |
+| INT-1.5 | Page title is set correctly | Document title is "Velobiz - AI Automation..." |
 
 **Example Test:**
 ```typescript
@@ -690,7 +690,7 @@ describe('Home Page Routing', () => {
     await router.navigate(['/']);
     fixture.detectChanges();
 
-    expect(document.title).toBe('VelocityAI - AI Automation that Accelerates Your Business');
+    expect(document.title).toBe('Velobiz - AI Automation that Accelerates Your Business');
   });
 });
 ```

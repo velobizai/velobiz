@@ -185,17 +185,17 @@ Content-Type: application/json; charset=utf-8
 
 ### Controller
 
-**File:** `backend/VelocityAI.Api/Controllers/ServicesController.cs`
+**File:** `backend/Velobiz.Api/Controllers/ServicesController.cs`
 
 **Implementation:**
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
-using VelocityAI.Api.DTOs;
-using VelocityAI.Api.Models;
-using VelocityAI.Api.Services;
+using Velobiz.Api.DTOs;
+using Velobiz.Api.Models;
+using Velobiz.Api.Services;
 
-namespace VelocityAI.Api.Controllers;
+namespace Velobiz.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -239,12 +239,12 @@ public class ServicesController : ControllerBase
 
 ### Service Layer
 
-**Interface:** `backend/VelocityAI.Api/Services/IServicesService.cs`
+**Interface:** `backend/Velobiz.Api/Services/IServicesService.cs`
 
 ```csharp
-using VelocityAI.Api.Models;
+using Velobiz.Api.Models;
 
-namespace VelocityAI.Api.Services;
+namespace Velobiz.Api.Services;
 
 public interface IServicesService
 {
@@ -252,13 +252,13 @@ public interface IServicesService
 }
 ```
 
-**Implementation:** `backend/VelocityAI.Api/Services/ServicesService.cs`
+**Implementation:** `backend/Velobiz.Api/Services/ServicesService.cs`
 
 ```csharp
-using VelocityAI.Api.Models;
-using VelocityAI.Api.Repositories;
+using Velobiz.Api.Models;
+using Velobiz.Api.Repositories;
 
-namespace VelocityAI.Api.Services;
+namespace Velobiz.Api.Services;
 
 public class ServicesService : IServicesService
 {
@@ -278,12 +278,12 @@ public class ServicesService : IServicesService
 
 ### Repository Layer
 
-**Interface:** `backend/VelocityAI.Api/Repositories/IServicesRepository.cs`
+**Interface:** `backend/Velobiz.Api/Repositories/IServicesRepository.cs`
 
 ```csharp
-using VelocityAI.Api.Models;
+using Velobiz.Api.Models;
 
-namespace VelocityAI.Api.Repositories;
+namespace Velobiz.Api.Repositories;
 
 public interface IServicesRepository
 {
@@ -291,14 +291,14 @@ public interface IServicesRepository
 }
 ```
 
-**Implementation:** `backend/VelocityAI.Api/Repositories/ServicesRepository.cs`
+**Implementation:** `backend/Velobiz.Api/Repositories/ServicesRepository.cs`
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
-using VelocityAI.Api.Data;
-using VelocityAI.Api.Models;
+using Velobiz.Api.Data;
+using Velobiz.Api.Models;
 
-namespace VelocityAI.Api.Repositories;
+namespace Velobiz.Api.Repositories;
 
 public class ServicesRepository : IServicesRepository
 {
@@ -322,7 +322,7 @@ public class ServicesRepository : IServicesRepository
 
 ### Dependency Injection Registration
 
-**File:** `backend/VelocityAI.Api/Program.cs`
+**File:** `backend/Velobiz.Api/Program.cs`
 
 ```csharp
 // Register repository
@@ -588,9 +588,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "VelocityAI API",
+        Title = "Velobiz API",
         Version = "v1",
-        Description = "API for VelocityAI marketing website"
+        Description = "API for Velobiz marketing website"
     });
 
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";

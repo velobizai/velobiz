@@ -1,6 +1,6 @@
-using VelocityAI.Api.Models;
+using Velobiz.Api.Models;
 
-namespace VelocityAI.Api.Services;
+namespace Velobiz.Api.Services;
 
 /// <summary>
 /// Email service for sending contact form emails

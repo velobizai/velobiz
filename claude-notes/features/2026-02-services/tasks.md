@@ -49,7 +49,7 @@ Update `ApplicationDbContext.OnModelCreating()` to seed all 8 services using `Ha
 - ✅ Seed data matches content from agent-plan-prompt.md lines 126-164
 
 **Files to Modify:**
-- `backend/VelocityAI.Api/Data/ApplicationDbContext.cs`
+- `backend/Velobiz.Api/Data/ApplicationDbContext.cs`
 
 **Implementation Notes:**
 ```csharp
@@ -91,22 +91,22 @@ Generate EF Core migration to insert seed data into Services table, then apply i
 
 **Acceptance Criteria:**
 - ✅ Migration generated: `dotnet ef migrations add SeedServicesData`
-- ✅ Migration file created in `backend/VelocityAI.Api/Migrations/`
+- ✅ Migration file created in `backend/Velobiz.Api/Migrations/`
 - ✅ Migration applied: `dotnet ef database update`
 - ✅ Verification query returns 8 rows: `SELECT * FROM Services;`
 - ✅ No errors during migration application
 
 **Commands to Run:**
 ```bash
-cd backend/VelocityAI.Api
+cd backend/Velobiz.Api
 dotnet ef migrations add SeedServicesData
 dotnet ef database update
 ```
 
 **Files Created:**
-- `backend/VelocityAI.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.cs`
-- `backend/VelocityAI.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.Designer.cs`
-- `backend/VelocityAI.Api/Migrations/ApplicationDbContextModelSnapshot.cs` (updated)
+- `backend/Velobiz.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.cs`
+- `backend/Velobiz.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.Designer.cs`
+- `backend/Velobiz.Api/Migrations/ApplicationDbContextModelSnapshot.cs` (updated)
 
 **Verification:**
 ```sql
@@ -141,8 +141,8 @@ Create repository interface and implementation for querying services from the da
 - ✅ Method returns `Task<IEnumerable<Service>>`
 
 **Files to Create:**
-- `backend/VelocityAI.Api/Repositories/IServicesRepository.cs`
-- `backend/VelocityAI.Api/Repositories/ServicesRepository.cs`
+- `backend/Velobiz.Api/Repositories/IServicesRepository.cs`
+- `backend/Velobiz.Api/Repositories/ServicesRepository.cs`
 
 **Implementation:**
 ```csharp
@@ -190,8 +190,8 @@ Create service layer interface and implementation that calls the repository. Thi
 - ✅ Method returns `Task<IEnumerable<Service>>`
 
 **Files to Create:**
-- `backend/VelocityAI.Api/Services/IServicesService.cs`
-- `backend/VelocityAI.Api/Services/ServicesService.cs`
+- `backend/Velobiz.Api/Services/IServicesService.cs`
+- `backend/Velobiz.Api/Services/ServicesService.cs`
 
 **Implementation:**
 ```csharp
@@ -237,8 +237,8 @@ Replace the 501 stub in ServicesController with full implementation. Register re
 - ✅ Swagger XML comments present
 
 **Files to Modify:**
-- `backend/VelocityAI.Api/Controllers/ServicesController.cs`
-- `backend/VelocityAI.Api/Program.cs`
+- `backend/Velobiz.Api/Controllers/ServicesController.cs`
+- `backend/Velobiz.Api/Program.cs`
 
 **Program.cs DI Registration:**
 ```csharp
@@ -489,7 +489,7 @@ export class ServicesPageComponent implements OnInit {
   }
 
   private setMetaTags(): void {
-    this.title.setTitle('AI Automation Services | VelocityAI');
+    this.title.setTitle('AI Automation Services | Velobiz');
     this.meta.updateTag({
       name: 'description',
       content: 'Discover our 8 AI automation services: Voice AI Agents, Email Management, Marketing Automation, and more.'
@@ -556,7 +556,7 @@ Implement responsive CSS Grid layout and dark luxury theme styling for the servi
 
 **Verification:**
 - Page looks polished at 320px, 768px, 1024px, 1440px
-- Colors match VelocityAI dark luxury theme
+- Colors match Velobiz dark luxury theme
 - Hover effects work smoothly
 - No layout shifts
 
@@ -668,7 +668,7 @@ Run build and lint commands to ensure code quality and no compilation errors.
 
 **Backend:**
 ```bash
-cd backend/VelocityAI.Api
+cd backend/Velobiz.Api
 dotnet build
 dotnet test  # Run unit tests (if any exist)
 ```

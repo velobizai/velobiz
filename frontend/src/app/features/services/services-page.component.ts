@@ -53,14 +53,14 @@ export class ServicesPageComponent implements OnInit {
   }
 
   private setMetaTags(): void {
-    this.title.setTitle('AI Automation Services | VelocityAI');
+    this.title.setTitle('AI Automation Services | Velobiz');
     this.meta.updateTag({
       name: 'description',
       content: 'Discover our 8 AI automation services: Voice AI Agents, Email Management, Marketing Automation, and more. Transform your business operations with intelligent automation.'
     });
     this.meta.updateTag({
       property: 'og:title',
-      content: 'AI Automation Services | VelocityAI'
+      content: 'AI Automation Services | Velobiz'
     });
     this.meta.updateTag({
       property: 'og:description',

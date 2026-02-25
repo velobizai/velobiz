@@ -12,7 +12,7 @@
 ### Q1: What is the business problem this feature solves? Who are the target users?
 **Answer:**
 The FAQ page addresses common pre-sale questions and reduces support burden by providing immediate answers to potential customers. Target users are:
-- Prospective customers researching VelocityAI services
+- Prospective customers researching Velobiz services
 - Existing customers looking for clarifications
 - Sales team members who need quick reference material
 
@@ -71,7 +71,7 @@ Must-have capabilities:
 **Answer:**
 This feature is **READ-ONLY**. No create, update, or delete operations.
 
-**Entity: Faq** (already exists in backend/VelocityAI.Api/Models/Faq.cs)
+**Entity: Faq** (already exists in backend/Velobiz.Api/Models/Faq.cs)
 ```csharp
 public class Faq
 {
@@ -127,7 +127,7 @@ public class Faq
 ```
 
 **Existing backend implementation:**
-- FaqsController.GetAll() in backend/VelocityAI.Api/Controllers/FaqsController.cs
+- FaqsController.GetAll() in backend/Velobiz.Api/Controllers/FaqsController.cs
 - FaqService and FaqRepository already registered in DI
 
 ---
@@ -182,7 +182,7 @@ Components needed:
 
 ### Q9: Are there any specific design requirements? (brand colors, existing design system, etc.)
 **Answer:**
-**Design System:** VelocityAI dark luxury theme (already defined in global CSS custom properties)
+**Design System:** Velobiz dark luxury theme (already defined in global CSS custom properties)
 
 **Colors:**
 - Background: `var(--bg-primary)` (#0a0a0f)

@@ -17,12 +17,12 @@ This feature does NOT introduce new database tables or migrations. The `Faq` ent
 
 ### Faq Entity
 
-**File:** `backend/VelocityAI.Api/Models/Faq.cs` (ALREADY EXISTS)
+**File:** `backend/Velobiz.Api/Models/Faq.cs` (ALREADY EXISTS)
 
 **Entity Class:**
 
 ```csharp
-namespace VelocityAI.Api.Models;
+namespace Velobiz.Api.Models;
 
 public class Faq
 {
@@ -71,7 +71,7 @@ CREATE TABLE `Faqs` (
 
 ### DbContext Configuration
 
-**File:** `backend/VelocityAI.Api/Data/ApplicationDbContext.cs` (ALREADY EXISTS)
+**File:** `backend/Velobiz.Api/Data/ApplicationDbContext.cs` (ALREADY EXISTS)
 
 **Existing DbSet:**
 
@@ -344,7 +344,7 @@ WHERE Id = 1;
 
 **Development (Local):**
 - Connection string in `appsettings.Development.json`
-- Typically: `Server=localhost;Database=VelocityAI;User=root;Password=...;`
+- Typically: `Server=localhost;Database=Velobiz;User=root;Password=...;`
 
 **Production (Railway):**
 - Connection string in Railway environment variables

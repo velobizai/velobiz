@@ -1,4 +1,4 @@
-# MySQL Setup Guide for VelocityAI
+# MySQL Setup Guide for Velobiz
 
 ## Current Status
 - ✅ EF Core migrations created (`InitialCreate` migration exists)
@@ -29,7 +29,7 @@
    MYSQL_PASSWORD: [copy this]
    ```
 
-5. Update `backend/VelocityAI.Api/appsettings.Development.json`:
+5. Update `backend/Velobiz.Api/appsettings.Development.json`:
    ```json
    {
      "ConnectionStrings": {
@@ -40,7 +40,7 @@
 
 6. Apply migrations:
    ```bash
-   cd backend/VelocityAI.Api
+   cd backend/Velobiz.Api
    dotnet ef database update
    ```
 
@@ -75,7 +75,7 @@
    exit;
    ```
 
-5. Update `backend/VelocityAI.Api/appsettings.Development.json`:
+5. Update `backend/Velobiz.Api/appsettings.Development.json`:
    ```json
    {
      "ConnectionStrings": {
@@ -86,7 +86,7 @@
 
 6. Apply migrations:
    ```bash
-   cd backend/VelocityAI.Api
+   cd backend/Velobiz.Api
    dotnet ef database update
    ```
 
@@ -106,7 +106,7 @@ docker run --name velocityai-mysql \
 # Server=localhost;Port=3306;Database=velocityai_dev;User=root;Password=dev_password;
 
 # Apply migrations
-cd backend/VelocityAI.Api
+cd backend/Velobiz.Api
 dotnet ef database update
 ```
 
@@ -138,7 +138,7 @@ Once migrations are applied:
 
 ```bash
 # Start the API
-cd backend/VelocityAI.Api
+cd backend/Velobiz.Api
 dotnet run
 
 # In another terminal, test endpoints:

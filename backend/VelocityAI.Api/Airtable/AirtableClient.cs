@@ -2,7 +2,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using Microsoft.Extensions.Options;
 
-namespace VelocityAI.Api.Airtable;
+namespace Velobiz.Api.Airtable;
 
 public class AirtableClient
 {

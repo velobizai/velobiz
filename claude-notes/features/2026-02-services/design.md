@@ -3,13 +3,13 @@
 **Feature ID:** FEATURE-3
 **Designer:** Auto-Generated (Lead Agent)
 **Date:** 2026-02-20
-**Design System:** VelocityAI Dark Luxury Theme
+**Design System:** Velobiz Dark Luxury Theme
 
 ---
 
 ## Design Philosophy
 
-The Services Page embodies VelocityAI's premium, forward-thinking brand with a dark luxury aesthetic. Each service card is a self-contained information capsule that invites exploration through subtle hover interactions. The design prioritizes **scanability** (quick short descriptions) while rewarding **curiosity** (detailed long descriptions on hover/tap). The layout follows a **progressive disclosure** pattern: glanceable grid → detailed card content → contact conversion.
+The Services Page embodies Velobiz's premium, forward-thinking brand with a dark luxury aesthetic. Each service card is a self-contained information capsule that invites exploration through subtle hover interactions. The design prioritizes **scanability** (quick short descriptions) while rewarding **curiosity** (detailed long descriptions on hover/tap). The layout follows a **progressive disclosure** pattern: glanceable grid → detailed card content → contact conversion.
 
 ---
 

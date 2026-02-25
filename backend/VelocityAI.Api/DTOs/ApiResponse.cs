@@ -1,4 +1,4 @@
-namespace VelocityAI.Api.DTOs;
+namespace Velobiz.Api.DTOs;
 
 public class ApiResponse<T>
 {

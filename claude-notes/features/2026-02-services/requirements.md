@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-The Services Page is a dedicated `/services` route that displays VelocityAI's 8 AI automation service offerings in a responsive grid layout. Unlike the home page which shows industry applications, this page details the actual services (Voice AI Agents, Email Management, Marketing Automation, etc.) with both short and long descriptions. Data is dynamically fetched from the MySQL database via a RESTful API, ensuring content can be managed through database updates rather than code changes.
+The Services Page is a dedicated `/services` route that displays Velobiz's 8 AI automation service offerings in a responsive grid layout. Unlike the home page which shows industry applications, this page details the actual services (Voice AI Agents, Email Management, Marketing Automation, etc.) with both short and long descriptions. Data is dynamically fetched from the MySQL database via a RESTful API, ensuring content can be managed through database updates rather than code changes.
 
 ---
 
@@ -215,7 +215,7 @@ The Services Page is a dedicated `/services` route that displays VelocityAI's 8 
 
 ### NFR-3.3: SEO
 
-- **Page Title:** "AI Automation Services | VelocityAI"
+- **Page Title:** "AI Automation Services | Velobiz"
 - **Meta Description:** "Discover our 8 AI automation services: Voice AI Agents, Email Management, Marketing Automation, and more. Transform your business with intelligent automation."
 - **Open Graph Tags:** og:title, og:description, og:image, og:url
 - **Structured Data:** JSON-LD schema for Service items (future enhancement)

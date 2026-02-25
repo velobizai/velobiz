@@ -10,7 +10,7 @@
 
 ### Q1: What is the business problem this feature solves? Who are the target users?
 
-The Home/Landing Page is the primary entry point and conversion funnel for the VelocityAI website. It solves the business problem of **establishing credibility, communicating value proposition, and converting visitors into leads**.
+The Home/Landing Page is the primary entry point and conversion funnel for the Velobiz website. It solves the business problem of **establishing credibility, communicating value proposition, and converting visitors into leads**.
 
 **Target users:**
 - **Business owners and operations managers** seeking AI automation solutions
@@ -19,9 +19,9 @@ The Home/Landing Page is the primary entry point and conversion funnel for the V
 - **Warm leads** clicking through from ads or content marketing
 
 **User goals:**
-- Quickly understand what VelocityAI does and how it helps businesses
+- Quickly understand what Velobiz does and how it helps businesses
 - See social proof and credibility indicators
-- Understand the process of working with VelocityAI
+- Understand the process of working with Velobiz
 - Identify relevant use cases for their industry
 - Take action (book consultation, view services, contact)
 
@@ -463,7 +463,7 @@ const INDUSTRIES = [
 
 **Summary of FEATURE 2: Home / Landing Page:**
 
-**Business Problem:** Primary conversion funnel to establish credibility and convert visitors into leads for VelocityAI's AI automation services.
+**Business Problem:** Primary conversion funnel to establish credibility and convert visitors into leads for Velobiz's AI automation services.
 
 **Target Users:** Business owners, operations managers, decision-makers seeking AI automation solutions.
 

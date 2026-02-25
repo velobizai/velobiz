@@ -1,4 +1,4 @@
-# VelocityAI - Complete Setup and Testing Guide
+# Velobiz - Complete Setup and Testing Guide
 
 ## 🚨 Current Status
 
@@ -46,7 +46,7 @@
    ```
 
 4. **Update Configuration**
-   Edit: `backend/VelocityAI.Api/appsettings.Development.json`
+   Edit: `backend/Velobiz.Api/appsettings.Development.json`
    ```json
    {
      "ConnectionStrings": {
@@ -57,7 +57,7 @@
 
 5. **Apply Migrations**
    ```bash
-   cd backend/VelocityAI.Api
+   cd backend/Velobiz.Api
    dotnet ef database update
    ```
 
@@ -103,7 +103,7 @@
    ```
 
 4. **Update Configuration**
-   Edit: `backend/VelocityAI.Api/appsettings.Development.json`
+   Edit: `backend/Velobiz.Api/appsettings.Development.json`
    ```json
    {
      "ConnectionStrings": {
@@ -114,7 +114,7 @@
 
 5. **Apply Migrations**
    ```bash
-   cd backend/VelocityAI.Api
+   cd backend/Velobiz.Api
    dotnet ef database update
    ```
 
@@ -155,7 +155,7 @@
 
 5. **Apply Migrations**
    ```bash
-   cd backend/VelocityAI.Api
+   cd backend/Velobiz.Api
    dotnet ef database update
    ```
 
@@ -187,11 +187,11 @@ docker rm -f velocityai-mysql
 2. **Generate App Password**
    - Go to: https://myaccount.google.com/apppasswords
    - Select "Mail" and "Other (Custom name)"
-   - Name it "VelocityAI Dev"
+   - Name it "Velobiz Dev"
    - Copy the 16-character password
 
 3. **Update Configuration**
-   Edit: `backend/VelocityAI.Api/appsettings.Development.json`
+   Edit: `backend/Velobiz.Api/appsettings.Development.json`
    ```json
    {
      "Mail": {
@@ -200,7 +200,7 @@ docker rm -f velocityai-mysql
        "Username": "your-email@gmail.com",
        "Password": "your-16-char-app-password",
        "From": "noreply@velocityai.com",
-       "FromName": "VelocityAI",
+       "FromName": "Velobiz",
        "ToOwner": "your-email@gmail.com",
        "EnableSsl": true
      }
@@ -220,7 +220,7 @@ docker rm -f velocityai-mysql
        "Username": "your-mailtrap-username",
        "Password": "your-mailtrap-password",
        "From": "noreply@velocityai.com",
-       "FromName": "VelocityAI",
+       "FromName": "Velobiz",
        "ToOwner": "admin@velocityai.com",
        "EnableSsl": true
      }
@@ -241,7 +241,7 @@ If you want to test without email:
 ### Step 1: Apply Migrations (After MySQL Setup)
 
 ```bash
-cd backend/VelocityAI.Api
+cd backend/Velobiz.Api
 dotnet ef database update
 ```
 
@@ -277,7 +277,7 @@ SELECT COUNT(*) FROM Faqs;      -- Should return 6
 ### Step 2: Start Backend
 
 ```bash
-cd backend/VelocityAI.Api
+cd backend/Velobiz.Api
 dotnet run
 ```
 

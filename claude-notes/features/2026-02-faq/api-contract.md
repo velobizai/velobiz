@@ -153,7 +153,7 @@ Content-Type: application/json; charset=utf-8
 
 ### Controller
 
-**File:** `backend/VelocityAI.Api/Controllers/FaqsController.cs` (ALREADY EXISTS — needs implementation)
+**File:** `backend/Velobiz.Api/Controllers/FaqsController.cs` (ALREADY EXISTS — needs implementation)
 
 **Current Status:** Returns 501 with stub message
 
@@ -161,11 +161,11 @@ Content-Type: application/json; charset=utf-8
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
-using VelocityAI.Api.DTOs;
-using VelocityAI.Api.Models;
-using VelocityAI.Api.Services;
+using Velobiz.Api.DTOs;
+using Velobiz.Api.Models;
+using Velobiz.Api.Services;
 
-namespace VelocityAI.Api.Controllers;
+namespace Velobiz.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -209,12 +209,12 @@ public class FaqsController : ControllerBase
 
 ### Service Layer
 
-**Interface:** `backend/VelocityAI.Api/Services/IFaqService.cs` (ALREADY EXISTS)
+**Interface:** `backend/Velobiz.Api/Services/IFaqService.cs` (ALREADY EXISTS)
 
 ```csharp
-using VelocityAI.Api.Models;
+using Velobiz.Api.Models;
 
-namespace VelocityAI.Api.Services;
+namespace Velobiz.Api.Services;
 
 public interface IFaqService
 {
@@ -222,17 +222,17 @@ public interface IFaqService
 }
 ```
 
-**Implementation:** `backend/VelocityAI.Api/Services/FaqService.cs` (ALREADY EXISTS — needs implementation)
+**Implementation:** `backend/Velobiz.Api/Services/FaqService.cs` (ALREADY EXISTS — needs implementation)
 
 **Current Status:** Throws NotImplementedException
 
 **Required Implementation:**
 
 ```csharp
-using VelocityAI.Api.Models;
-using VelocityAI.Api.Repositories;
+using Velobiz.Api.Models;
+using Velobiz.Api.Repositories;
 
-namespace VelocityAI.Api.Services;
+namespace Velobiz.Api.Services;
 
 public class FaqService : IFaqService
 {
@@ -252,12 +252,12 @@ public class FaqService : IFaqService
 
 ### Repository Layer
 
-**Interface:** `backend/VelocityAI.Api/Repositories/IFaqRepository.cs` (ALREADY EXISTS)
+**Interface:** `backend/Velobiz.Api/Repositories/IFaqRepository.cs` (ALREADY EXISTS)
 
 ```csharp
-using VelocityAI.Api.Models;
+using Velobiz.Api.Models;
 
-namespace VelocityAI.Api.Repositories;
+namespace Velobiz.Api.Repositories;
 
 public interface IFaqRepository
 {
@@ -269,18 +269,18 @@ public interface IFaqRepository
 }
 ```
 
-**Implementation:** `backend/VelocityAI.Api/Repositories/FaqRepository.cs` (ALREADY EXISTS — needs implementation)
+**Implementation:** `backend/Velobiz.Api/Repositories/FaqRepository.cs` (ALREADY EXISTS — needs implementation)
 
 **Current Status:** All methods throw NotImplementedException
 
 **Required Implementation (GetAllActiveAsync only):**
 
 ```csharp
-using VelocityAI.Api.Data;
-using VelocityAI.Api.Models;
+using Velobiz.Api.Data;
+using Velobiz.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace VelocityAI.Api.Repositories;
+namespace Velobiz.Api.Repositories;
 
 public class FaqRepository : IFaqRepository
 {
@@ -325,7 +325,7 @@ public class FaqRepository : IFaqRepository
 
 ### Dependency Injection Registration
 
-**File:** `backend/VelocityAI.Api/Program.cs` (ALREADY REGISTERED)
+**File:** `backend/Velobiz.Api/Program.cs` (ALREADY REGISTERED)
 
 ```csharp
 // Already registered in Program.cs:

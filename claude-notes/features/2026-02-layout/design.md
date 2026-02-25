@@ -9,7 +9,7 @@
 
 ## 1. Design Philosophy
 
-The VelocityAI layout components follow a **Dark Luxury** aesthetic with:
+The Velobiz layout components follow a **Dark Luxury** aesthetic with:
 - **Dark backgrounds** (#0a0a0f range) for premium, modern feel
 - **Vibrant teal accent** (#00e5a0) for CTAs and highlights
 - **Frosted glass effects** for depth and visual hierarchy
@@ -42,7 +42,7 @@ app.component.html
 - **Dependencies**: Angular Material (MatSidenav, MatIcon), RouterLink, RouterLinkActive
 
 **Sub-components/Elements:**
-- Logo (image + text "VelocityAI")
+- Logo (image + text "Velobiz")
 - Desktop Navigation (horizontal list of links)
 - Mobile Hamburger Icon (Material "menu" icon)
 - Mobile Drawer (MatSidenav with vertical link list)
@@ -184,7 +184,7 @@ All colors are defined as CSS custom properties in `src/styles.scss`:
 #### Layout
 ```
 ┌────────────────────────────────────────────────────────────────┐
-│  [Logo] VelocityAI    Home  Services  Pricing  FAQ  Contact    │
+│  [Logo] Velobiz    Home  Services  Pricing  FAQ  Contact    │
 │                                                   [Get Started] │
 └────────────────────────────────────────────────────────────────┘
 ```
@@ -354,7 +354,7 @@ All colors are defined as CSS custom properties in `src/styles.scss`:
 #### Layout
 ```
 ┌────────────────────────────────────┐
-│  [Logo] VelocityAI        [☰]     │
+│  [Logo] Velobiz        [☰]     │
 └────────────────────────────────────┘
 ```
 
@@ -469,7 +469,7 @@ All colors are defined as CSS custom properties in `src/styles.scss`:
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  [Logo]                Quick Links      Company         Legal    │
-│  VelocityAI            Home             About           Privacy  │
+│  Velobiz            Home             About           Privacy  │
 │  Tagline...            Services         Careers         Terms    │
 │  Description text...   Pricing          Blog            Cookies  │
 │                        FAQ                                       │
@@ -477,7 +477,7 @@ All colors are defined as CSS custom properties in `src/styles.scss`:
 │                                                                  │
 │  ──────────────────────────────────────────────────────────────  │
 │                                                                  │
-│  [LinkedIn] [Twitter] [GitHub]          © 2026 VelocityAI.      │
+│  [LinkedIn] [Twitter] [GitHub]          © 2026 Velobiz.      │
 │                                         All rights reserved.     │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -502,7 +502,7 @@ All colors are defined as CSS custom properties in `src/styles.scss`:
 ```
 ┌─────────────────────────────────────────┐
 │  [Logo]                Quick Links       │
-│  VelocityAI            Home              │
+│  Velobiz            Home              │
 │  Tagline...            Services          │
 │  Description...        Pricing           │
 │                        FAQ               │
@@ -516,7 +516,7 @@ All colors are defined as CSS custom properties in `src/styles.scss`:
 │  ────────────────────────────────────   │
 │                                          │
 │  [LinkedIn] [Twitter] [GitHub]          │
-│  © 2026 VelocityAI. All rights...       │
+│  © 2026 Velobiz. All rights...       │
 └─────────────────────────────────────────┘
 ```
 
@@ -539,7 +539,7 @@ All colors are defined as CSS custom properties in `src/styles.scss`:
 ```
 ┌─────────────────────────┐
 │  [Logo]                 │
-│  VelocityAI             │
+│  Velobiz             │
 │  Tagline...             │
 │  Description...         │
 │                         │
@@ -563,7 +563,7 @@ All colors are defined as CSS custom properties in `src/styles.scss`:
 │  [LinkedIn] [Twitter]   │
 │  [GitHub]               │
 │                         │
-│  © 2026 VelocityAI.     │
+│  © 2026 Velobiz.     │
 │  All rights reserved.   │
 └─────────────────────────┘
 ```
@@ -857,7 +857,7 @@ private setupScrollspy() {
 <a href="{{ environment.social.linkedin }}"
    target="_blank"
    rel="noopener noreferrer"
-   aria-label="Visit VelocityAI on LinkedIn">
+   aria-label="Visit Velobiz on LinkedIn">
   <mat-icon>linkedin</mat-icon>
 </a>
 ```

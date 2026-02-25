@@ -1,7 +1,7 @@
-using VelocityAI.Api.DTOs;
-using VelocityAI.Api.Models;
+using Velobiz.Api.DTOs;
+using Velobiz.Api.Models;
 
-namespace VelocityAI.Api.Services;
+namespace Velobiz.Api.Services;
 
 public interface IContactService
 {

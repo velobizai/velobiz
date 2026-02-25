@@ -1,8 +1,8 @@
 using MailKit.Net.Smtp;
 using MimeKit;
-using VelocityAI.Api.Models;
+using Velobiz.Api.Models;
 
-namespace VelocityAI.Api.Services;
+namespace Velobiz.Api.Services;
 
 public class MailKitEmailService : IEmailService
 {
@@ -25,13 +25,13 @@ public class MailKitEmailService : IEmailService
                 _config["Mail:From"]
             ));
             message.To.Add(MailboxAddress.Parse(contact.Email));
-            message.Subject = "Thank you for contacting VelocityAI";
+            message.Subject = "Thank you for contacting Velobiz";
 
             message.Body = new TextPart("plain")
             {
                 Text = $@"Hi {contact.Name},
 
-Thank you for reaching out to VelocityAI! We've received your inquiry about ""{contact.ServiceInterest}"".
+Thank you for reaching out to Velobiz! We've received your inquiry about ""{contact.ServiceInterest}"".
 
 Your submission details:
 - Name: {contact.Name}
@@ -44,7 +44,7 @@ Your submission details:
 Our team will review your inquiry and respond within 24 hours during business days.
 
 Best regards,
-VelocityAI Team
+Velobiz Team
 
 ---
 This is an automated confirmation. Please do not reply to this email."

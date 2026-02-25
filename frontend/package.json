@@ -1,7 +1,7 @@
 {
   "name": "velocityai-frontend",
   "version": "1.0.0",
-  "description": "VelocityAI Agency Portfolio & AI Platform - Angular 19 Frontend",
+  "description": "Velobiz Agency Portfolio & AI Platform - Angular 19 Frontend",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

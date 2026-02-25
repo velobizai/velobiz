@@ -391,7 +391,7 @@ Consider adding a `Navigation` table if:
 2. Navigation structure changes frequently (e.g., seasonal promotions, temporary pages)
 3. Multi-tenant application where each client has different navigation
 
-**For a marketing website with stable structure (like VelocityAI), hardcoded navigation is the right choice.**
+**For a marketing website with stable structure (like Velobiz), hardcoded navigation is the right choice.**
 
 ---
 

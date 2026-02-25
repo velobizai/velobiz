@@ -1,6 +1,6 @@
-using VelocityAI.Api.Models;
+using Velobiz.Api.Models;
 
-namespace VelocityAI.Api.Repositories;
+namespace Velobiz.Api.Repositories;
 
 public interface INewsletterRepository
 {

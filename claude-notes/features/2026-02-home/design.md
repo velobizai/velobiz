@@ -434,7 +434,7 @@ export class StatsBarComponent implements AfterViewInit {
 
 ### 3. ProcessComponent
 
-**Purpose:** Explain the 4-step process of working with VelocityAI
+**Purpose:** Explain the 4-step process of working with Velobiz
 
 **File:** `frontend/src/app/features/home/process/process.component.ts`
 
@@ -579,7 +579,7 @@ const PROCESS_STEPS = [
 
 ### 4. IndustriesComponent
 
-**Purpose:** Showcase 8 industries VelocityAI serves
+**Purpose:** Showcase 8 industries Velobiz serves
 
 **File:** `frontend/src/app/features/home/industries/industries.component.ts`
 
@@ -847,7 +847,7 @@ export const routes: Routes = [
   {
     path: '',
     component: HomePageComponent,
-    title: 'VelocityAI - AI Automation that Accelerates Your Business'
+    title: 'Velobiz - AI Automation that Accelerates Your Business'
   },
   // Other routes...
 ];
