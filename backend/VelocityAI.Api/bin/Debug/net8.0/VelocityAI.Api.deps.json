@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "VelocityAI.Api/1.0.0": {
+      "Velobiz.Api/1.0.0": {
         "dependencies": {
           "FluentValidation.AspNetCore": "11.3.0",
           "MailKit": "4.15.0",
@@ -18,7 +18,7 @@
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
-          "VelocityAI.Api.dll": {}
+          "Velobiz.Api.dll": {}
         }
       },
       "BouncyCastle.Cryptography/2.6.2": {
@@ -637,7 +637,7 @@
     }
   },
   "libraries": {
-    "VelocityAI.Api/1.0.0": {
+    "Velobiz.Api/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
