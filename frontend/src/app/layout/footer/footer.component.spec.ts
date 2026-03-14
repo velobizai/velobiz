@@ -135,7 +135,7 @@ describe('FooterComponent', () => {
     it('should display company name in copyright', () => {
       const compiled = fixture.nativeElement as HTMLElement;
       const copyright = compiled.querySelector('.footer__copyright');
-      expect(copyright?.textContent).toContain('VelocityAI');
+      expect(copyright?.textContent).toContain('Velobiz');
     });
 
     it('should display current year in copyright', () => {

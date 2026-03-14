@@ -1,6 +1,6 @@
-using VelocityAI.Api.DTOs;
+using Velobiz.Api.DTOs;
 
-namespace VelocityAI.Api.Middleware;
+namespace Velobiz.Api.Middleware;
 
 public class ExceptionHandlerMiddleware
 {

@@ -7,7 +7,7 @@
 ## Round 1: Context
 
 ### 1. What is the business problem this feature solves? Who are the target users?
-**Answer**: The Contact page enables potential clients to reach out to VelocityAI for consultations, inquiries, and service requests. Target users are business owners, operations managers, and decision-makers interested in AI automation services.
+**Answer**: The Contact page enables potential clients to reach out to Velobiz for consultations, inquiries, and service requests. Target users are business owners, operations managers, and decision-makers interested in AI automation services.
 
 ### 2. What are the success criteria? How will you measure if this feature is working?
 **Answer**:
@@ -152,7 +152,7 @@ Yes, the Contact page is accessible at `/contact` route. The page includes:
 
 ### Email Template Requirements:
 1. **Confirmation Email** (to submitter):
-   - Subject: "Thank you for contacting VelocityAI"
+   - Subject: "Thank you for contacting Velobiz"
    - Body: Professional message confirming receipt, expected response time
    - Include summary of submitted information
 

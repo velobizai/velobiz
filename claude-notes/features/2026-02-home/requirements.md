@@ -9,15 +9,15 @@
 
 ## Business Problem
 
-The Home/Landing Page serves as the primary entry point and conversion funnel for the VelocityAI website. It addresses the critical business need to:
+The Home/Landing Page serves as the primary entry point and conversion funnel for the Velobiz website. It addresses the critical business need to:
 
-- **Establish credibility** for VelocityAI as a premium AI automation agency
+- **Establish credibility** for Velobiz as a premium AI automation agency
 - **Communicate value proposition** clearly and compellingly to first-time visitors
 - **Convert cold traffic** from search engines, social media, and referrals into warm leads
 - **Guide visitors** toward high-intent actions (book consultation, view services, contact)
-- **Differentiate** VelocityAI from competitors through a premium, modern design aesthetic
+- **Differentiate** Velobiz from competitors through a premium, modern design aesthetic
 
-Without a strong landing page, VelocityAI loses potential clients at the first touchpoint, resulting in high bounce rates and low conversion rates.
+Without a strong landing page, Velobiz loses potential clients at the first touchpoint, resulting in high bounce rates and low conversion rates.
 
 ---
 
@@ -63,7 +63,7 @@ Without a strong landing page, VelocityAI loses potential clients at the first t
 - ✅ Stats counter animations trigger correctly on scroll into viewport
 - ✅ All interactive elements keyboard accessible
 - ✅ Design matches approved "dark luxury" aesthetic
-- ✅ Content clearly communicates VelocityAI's value proposition
+- ✅ Content clearly communicates Velobiz's value proposition
 - ✅ Mobile responsiveness verified on iOS Safari and Android Chrome
 - ✅ No horizontal scroll on any device width (320px-1920px+)
 
@@ -73,7 +73,7 @@ Without a strong landing page, VelocityAI loses potential clients at the first t
 
 ### Story 1: Hero Section — First Impression
 **As a** business owner visiting the site for the first time
-**I want to** immediately understand what VelocityAI does and how it benefits me
+**I want to** immediately understand what Velobiz does and how it benefits me
 **So that** I can decide whether to continue exploring or leave
 
 **Acceptance Criteria:**
@@ -89,7 +89,7 @@ Without a strong landing page, VelocityAI loses potential clients at the first t
 
 ### Story 2: Stats Bar — Social Proof
 **As a** operations manager evaluating AI automation vendors
-**I want to** see quantifiable proof that VelocityAI has experience and reliability
+**I want to** see quantifiable proof that Velobiz has experience and reliability
 **So that** I can trust them with my business operations
 
 **Acceptance Criteria:**
@@ -104,8 +104,8 @@ Without a strong landing page, VelocityAI loses potential clients at the first t
 ---
 
 ### Story 3: Process Section — Understanding the Journey
-**As a** decision-maker considering VelocityAI's services
-**I want to** understand the steps involved in working with VelocityAI
+**As a** decision-maker considering Velobiz's services
+**I want to** understand the steps involved in working with Velobiz
 **So that** I can set realistic expectations and feel confident moving forward
 
 **Acceptance Criteria:**
@@ -120,7 +120,7 @@ Without a strong landing page, VelocityAI loses potential clients at the first t
 
 ### Story 4: Industries Section — Relevance Check
 **As a** business owner in a specific industry
-**I want to** see if VelocityAI serves businesses like mine
+**I want to** see if Velobiz serves businesses like mine
 **So that** I can confirm their services are relevant to my industry
 
 **Acceptance Criteria:**

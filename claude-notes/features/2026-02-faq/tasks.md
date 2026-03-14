@@ -46,7 +46,7 @@ Implement the `GetAllActiveAsync()` method in FaqRepository to query active FAQs
 - ✅ No errors or warnings on compilation
 
 **Files to Modify:**
-- `backend/VelocityAI.Api/Repositories/FaqRepository.cs`
+- `backend/Velobiz.Api/Repositories/FaqRepository.cs`
 
 **Implementation:**
 
@@ -85,7 +85,7 @@ Implement the `GetAllActiveFaqsAsync()` method in FaqService to delegate to the 
 - ✅ No errors or warnings on compilation
 
 **Files to Modify:**
-- `backend/VelocityAI.Api/Services/FaqService.cs`
+- `backend/Velobiz.Api/Services/FaqService.cs`
 
 **Implementation:**
 
@@ -124,17 +124,17 @@ Replace the 501 stub in FaqsController with full implementation that calls the s
 - ✅ Constructor injects ILogger (if not already present)
 
 **Files to Modify:**
-- `backend/VelocityAI.Api/Controllers/FaqsController.cs`
+- `backend/Velobiz.Api/Controllers/FaqsController.cs`
 
 **Implementation:**
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
-using VelocityAI.Api.DTOs;
-using VelocityAI.Api.Models;
-using VelocityAI.Api.Services;
+using Velobiz.Api.DTOs;
+using Velobiz.Api.Models;
+using Velobiz.Api.Services;
 
-namespace VelocityAI.Api.Controllers;
+namespace Velobiz.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -180,7 +180,7 @@ public class FaqsController : ControllerBase
 ```
 
 **Verification:**
-- Run backend: `dotnet run` (from backend/VelocityAI.Api)
+- Run backend: `dotnet run` (from backend/Velobiz.Api)
 - Test endpoint: `GET https://localhost:5001/api/faqs`
 - Expected: 200 OK with 6 FAQs in JSON response
 - Swagger UI shows updated endpoint documentation at https://localhost:5001/swagger
@@ -377,14 +377,14 @@ export class FaqPageComponent implements OnInit {
   }
 
   private setMetaTags(): void {
-    this.title.setTitle('Frequently Asked Questions | VelocityAI');
+    this.title.setTitle('Frequently Asked Questions | Velobiz');
     this.meta.updateTag({
       name: 'description',
       content: 'Get answers to common questions about AI automation, deployment timelines, security, integrations, and more.'
     });
     this.meta.updateTag({
       property: 'og:title',
-      content: 'Frequently Asked Questions | VelocityAI'
+      content: 'Frequently Asked Questions | Velobiz'
     });
     this.meta.updateTag({
       property: 'og:description',
@@ -600,7 +600,7 @@ Run build and lint commands to ensure code quality and no compilation errors.
 
 **Backend:**
 ```bash
-cd backend/VelocityAI.Api
+cd backend/Velobiz.Api
 dotnet build
 # Expected: Build succeeded with 0 warnings
 ```

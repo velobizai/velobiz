@@ -46,7 +46,7 @@
     ],
     "modified": [
       "Program.cs",
-      "VelocityAI.Api.csproj"
+      "Velobiz.Api.csproj"
     ],
     "packages_added": [
       "FluentValidation.AspNetCore 11.3.0",

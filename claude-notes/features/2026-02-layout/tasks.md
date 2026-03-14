@@ -263,7 +263,7 @@ Create the FooterComponent as a standalone component with 4-column responsive la
    - Import `environment` from `src/environments/environment`
    - Import OnPush change detection strategy
    - Define readonly properties:
-     - `companyName = 'VelocityAI'`
+     - `companyName = 'Velobiz'`
      - `tagline = 'AI Automation for Modern Businesses'`
      - `description = '...'`
      - `currentYear = new Date().getFullYear()`
@@ -485,7 +485,7 @@ Write comprehensive unit tests for FooterComponent covering link rendering, soci
 - Test that social URLs match `environment.social` values
 
 **6. Copyright Tests:**
-- Test that copyright text includes company name "VelocityAI"
+- Test that copyright text includes company name "Velobiz"
 - Test that copyright text includes current year
 - Test that copyright year updates dynamically (mock `new Date()`)
 

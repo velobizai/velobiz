@@ -1,10 +1,10 @@
 #!/bin/bash
-# VelocityAI Quick Test Script
+# Velobiz Quick Test Script
 # Run this after MySQL is configured
 
 set -e
 
-echo "🚀 VelocityAI Quick Test Script"
+echo "🚀 Velobiz Quick Test Script"
 echo "================================"
 echo ""
 
@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 
 # Test 1: Check MySQL Connection
 echo "📊 Step 1: Testing MySQL Connection..."
-cd backend/VelocityAI.Api
+cd backend/Velobiz.Api
 if dotnet ef database update --no-build > /dev/null 2>&1; then
     echo -e "${GREEN}✓${NC} MySQL connection successful"
 else

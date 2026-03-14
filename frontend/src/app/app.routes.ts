@@ -9,27 +9,27 @@ export const routes: Routes = [
   {
     path: '',
     component: HomePageComponent,
-    title: 'VelocityAI - AI Automation that Accelerates Your Business'
+    title: 'Velobiz - AI Automation that Accelerates Your Business'
   },
   {
     path: 'services',
     component: ServicesPageComponent,
-    title: 'Services - VelocityAI'
+    title: 'Services - Velobiz'
   },
   {
     path: 'pricing',
     component: PricingPageComponent,
-    title: 'Pricing - VelocityAI'
+    title: 'Pricing - Velobiz'
   },
   {
     path: 'faq',
     component: FaqPageComponent,
-    title: 'FAQ - VelocityAI'
+    title: 'FAQ - Velobiz'
   },
   {
     path: 'contact',
     component: ContactPageComponent,
-    title: 'Contact Us - VelocityAI'
+    title: 'Contact Us - Velobiz'
   },
   {
     path: '**',

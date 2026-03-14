@@ -1,8 +1,8 @@
-using VelocityAI.Api.Airtable;
-using VelocityAI.Api.Models;
+using Velobiz.Api.Airtable;
+using Velobiz.Api.Models;
 using Microsoft.Extensions.Options;
 
-namespace VelocityAI.Api.Repositories;
+namespace Velobiz.Api.Repositories;
 
 public class ContactRepository : IContactRepository
 {

@@ -14,12 +14,12 @@
   "estimatedTime": "8-10 hours",
   "status": "pending",
   "filesCreated": [
-    "backend/VelocityAI.Api/Repositories/IServicesRepository.cs",
-    "backend/VelocityAI.Api/Repositories/ServicesRepository.cs",
-    "backend/VelocityAI.Api/Services/IServicesService.cs",
-    "backend/VelocityAI.Api/Services/ServicesService.cs",
-    "backend/VelocityAI.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.cs",
-    "backend/VelocityAI.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.Designer.cs",
+    "backend/Velobiz.Api/Repositories/IServicesRepository.cs",
+    "backend/Velobiz.Api/Repositories/ServicesRepository.cs",
+    "backend/Velobiz.Api/Services/IServicesService.cs",
+    "backend/Velobiz.Api/Services/ServicesService.cs",
+    "backend/Velobiz.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.cs",
+    "backend/Velobiz.Api/Migrations/YYYYMMDDHHMMSS_SeedServicesData.Designer.cs",
     "frontend/src/app/core/services/services.service.ts",
     "frontend/src/app/core/services/services.service.spec.ts",
     "frontend/src/app/core/models/service.model.ts",
@@ -33,10 +33,10 @@
     "frontend/src/app/features/services/services-page.component.spec.ts"
   ],
   "filesModified": [
-    "backend/VelocityAI.Api/Data/ApplicationDbContext.cs",
-    "backend/VelocityAI.Api/Controllers/ServicesController.cs",
-    "backend/VelocityAI.Api/Program.cs",
-    "backend/VelocityAI.Api/Migrations/ApplicationDbContextModelSnapshot.cs",
+    "backend/Velobiz.Api/Data/ApplicationDbContext.cs",
+    "backend/Velobiz.Api/Controllers/ServicesController.cs",
+    "backend/Velobiz.Api/Program.cs",
+    "backend/Velobiz.Api/Migrations/ApplicationDbContextModelSnapshot.cs",
     "frontend/src/app/app.routes.ts"
   ],
   "dependencies": {
@@ -75,6 +75,6 @@
     "No tests written (deferred per CLAUDE.md user instruction)",
     "Existing ServicesPageComponent (with hardcoded data) will be refactored to use API",
     "Seed data content is finalized in agent-plan-prompt.md (no pending copywriting)",
-    "Design follows VelocityAI dark luxury theme from Features 0-2"
+    "Design follows Velobiz dark luxury theme from Features 0-2"
   ]
 }

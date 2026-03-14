@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jparekh\\project\\RND\\Agency\\Website\\backend\\VelocityAI.Api\\VelocityAI.Api.csproj": {}
+    "C:\\Users\\jparekh\\project\\RND\\Agency\\Website\\backend\\Velobiz.Api\\Velobiz.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jparekh\\project\\RND\\Agency\\Website\\backend\\VelocityAI.Api\\VelocityAI.Api.csproj": {
+    "C:\\Users\\jparekh\\project\\RND\\Agency\\Website\\backend\\Velobiz.Api\\Velobiz.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jparekh\\project\\RND\\Agency\\Website\\backend\\VelocityAI.Api\\VelocityAI.Api.csproj",
-        "projectName": "VelocityAI.Api",
-        "projectPath": "C:\\Users\\jparekh\\project\\RND\\Agency\\Website\\backend\\VelocityAI.Api\\VelocityAI.Api.csproj",
+        "projectUniqueName": "C:\\Users\\jparekh\\project\\RND\\Agency\\Website\\backend\\Velobiz.Api\\Velobiz.Api.csproj",
+        "projectName": "Velobiz.Api",
+        "projectPath": "C:\\Users\\jparekh\\project\\RND\\Agency\\Website\\backend\\Velobiz.Api\\Velobiz.Api.csproj",
         "packagesPath": "C:\\Users\\jparekh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jparekh\\project\\RND\\Agency\\Website\\backend\\VelocityAI.Api\\obj\\",
+        "outputPath": "C:\\Users\\jparekh\\project\\RND\\Agency\\Website\\backend\\Velobiz.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

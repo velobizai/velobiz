@@ -1,4 +1,4 @@
-Project Name: VelocityAI
+Project Name: Velobiz
 Project Type: Marketing/Agency Website — Full Stack (Angular 19 + .NET Core 8 + MySQL 8 + Entity Framework Core)
 Purpose: A premium AI automation agency website that showcases our services, attracts leads, and books consultations. Similar look and feel to a dark-themed SaaS agency site with a modern, high-end aesthetic.
 
@@ -272,7 +272,7 @@ Frontend (/frontend):
   environment.ts / environment.prod.ts
 
 Backend (/backend):
-  VelocityAI.Api/                     (.NET Core 8 Web API project)
+  Velobiz.Api/                     (.NET Core 8 Web API project)
     Controllers/
       ServicesController.cs
       FaqsController.cs
@@ -317,7 +317,7 @@ Backend (/backend):
     appsettings.Development.json
     appsettings.Production.json
     Program.cs                     (app bootstrap, DI registration, EF Core setup, middleware pipeline)
-    VelocityAI.Api.csproj
+    Velobiz.Api.csproj
 
 --- CONTACT FORM ---
 
@@ -345,7 +345,7 @@ Professional, confident, and forward-thinking. Not overly technical. The audienc
 The Lead Agent must follow this order strictly. Do not begin a feature until the previous feature's tasks.md has been completed and tests have passed.
 
 Phase 0 — Infrastructure (FEATURE 0):
-  0.1   .NET Core 8 Web API project scaffolded: folder structure, Program.cs, VelocityAI.Api.csproj with all NuGet packages
+  0.1   .NET Core 8 Web API project scaffolded: folder structure, Program.cs, Velobiz.Api.csproj with all NuGet packages
   0.2   Railway MySQL 8 database provisioned, connection string added to appsettings.Development.json under ConnectionStrings:DefaultConnection
   0.3   Pomelo EF Core MySQL provider registered in Program.cs using AddDbContext with ServerVersion.AutoDetect
   0.4   All 4 entity classes created in /Models (Contact, Faq, Service, NewsletterSubscriber)

@@ -27,7 +27,7 @@ export const FOOTER_LEGAL_LINKS: NavLink[] = [
 ];
 
 export const FOOTER_BRAND = {
-  name: 'VelocityAI',
+  name: 'Velobiz',
   tagline: 'AI Automation that Accelerates',
   description: 'Transform your business operations with intelligent AI agents that work 24/7, scale instantly, and never miss a beat.'
 };

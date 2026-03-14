@@ -1,7 +1,7 @@
 using FluentValidation;
-using VelocityAI.Api.DTOs;
+using Velobiz.Api.DTOs;
 
-namespace VelocityAI.Api.Validators;
+namespace Velobiz.Api.Validators;
 
 public class ContactRequestValidator : AbstractValidator<ContactRequestDto>
 {

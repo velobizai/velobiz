@@ -20,7 +20,7 @@ const TESTIMONIALS: Testimonial[] = [
     company: 'TechFlow Inc',
     avatar: '👩‍💼',
     rating: 5,
-    text: 'VelocityAI transformed our customer support. Response times dropped from hours to seconds, and satisfaction scores jumped 40%. The AI agents handle complex queries with impressive accuracy.'
+    text: 'Velobiz transformed our customer support. Response times dropped from hours to seconds, and satisfaction scores jumped 40%. The AI agents handle complex queries with impressive accuracy.'
   },
   {
     id: '2',

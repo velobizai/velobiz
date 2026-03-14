@@ -1,4 +1,4 @@
-namespace VelocityAI.Api.Airtable;
+namespace Velobiz.Api.Airtable;
 
 public class AirtableOptions
 {

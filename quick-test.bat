@@ -1,14 +1,14 @@
 @echo off
-REM VelocityAI Quick Test Script (Windows)
+REM Velobiz Quick Test Script (Windows)
 REM Run this after MySQL is configured
 
 echo ================================
-echo VelocityAI Quick Test Script
+echo Velobiz Quick Test Script
 echo ================================
 echo.
 
 echo Step 1: Testing MySQL Connection...
-cd backend\VelocityAI.Api
+cd backend\Velobiz.Api
 dotnet ef database update --no-build >nul 2>&1
 if %ERRORLEVEL% EQU 0 (
     echo [OK] MySQL connection successful
@@ -46,7 +46,7 @@ echo All builds successful!
 echo ================================
 echo.
 echo Next steps:
-echo   1. Start backend:  cd backend\VelocityAI.Api ^&^& dotnet run
+echo   1. Start backend:  cd backend\Velobiz.Api ^&^& dotnet run
 echo   2. Start frontend: cd frontend ^&^& npm start
 echo   3. Visit: http://localhost:4200
 echo.

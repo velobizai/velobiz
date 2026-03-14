@@ -292,7 +292,7 @@ describe('FooterComponent - Copyright', () => {
 **Test Cases:**
 | Test ID | Description | Type | Expected Result |
 |---------|-------------|------|-----------------|
-| FOOT-UT-016 | Copyright includes "VelocityAI" | ✅ Positive | Copyright text contains "VelocityAI" |
+| FOOT-UT-016 | Copyright includes "Velobiz" | ✅ Positive | Copyright text contains "Velobiz" |
 | FOOT-UT-017 | Copyright includes current year | ✅ Positive | Copyright text contains "2026" (or current year) |
 | FOOT-UT-018 | Year updates when Date is mocked | 🚫 Edge Case | Mocking Date returns correct year |
 
@@ -335,13 +335,13 @@ describe('FooterComponent - Copyright', () => {
 
 | Test ID | Test Case | Expected Announcement | Pass/Fail |
 |---------|-----------|----------------------|-----------|
-| ACC-012 | Screen reader on logo | "VelocityAI, link, home" | [ ] |
+| ACC-012 | Screen reader on logo | "Velobiz, link, home" | [ ] |
 | ACC-013 | Screen reader on nav link | "Services, link" | [ ] |
 | ACC-014 | Screen reader on "Get Started" button | "Get Started, button, link" | [ ] |
 | ACC-015 | Screen reader on hamburger button | "Open navigation menu, button, not expanded" | [ ] |
 | ACC-016 | Screen reader on hamburger (menu open) | "Open navigation menu, button, expanded" | [ ] |
 | ACC-017 | Screen reader on mobile drawer | "Main navigation, navigation" | [ ] |
-| ACC-018 | Screen reader on social icon | "Visit VelocityAI on LinkedIn, link" | [ ] |
+| ACC-018 | Screen reader on social icon | "Visit Velobiz on LinkedIn, link" | [ ] |
 | ACC-019 | Screen reader on footer link | "Privacy Policy, link" | [ ] |
 
 **Test Procedure:**

@@ -10,7 +10,7 @@
 
 ## 1. Business Problem
 
-VelocityAI website visitors need a consistent, intuitive way to navigate between different pages and sections. Without a persistent navigation shell, users would struggle to:
+Velobiz website visitors need a consistent, intuitive way to navigate between different pages and sections. Without a persistent navigation shell, users would struggle to:
 - Find key information (services, pricing, contact)
 - Understand the brand identity
 - Navigate back to the homepage
@@ -28,7 +28,7 @@ The Navbar and Footer components solve this fundamental UX challenge by providin
 
 ### Primary Users
 - **Potential clients** browsing AI automation services
-- **Business owners** and operations managers exploring VelocityAI's offerings
+- **Business owners** and operations managers exploring Velobiz's offerings
 - **Visitors** seeking company information and contact details
 
 ### User Goals
@@ -80,7 +80,7 @@ The Navbar and Footer components solve this fundamental UX challenge by providin
 ## 4. User Stories
 
 ### US-001: Desktop Navigation
-**As a** potential client visiting the VelocityAI website on desktop,
+**As a** potential client visiting the Velobiz website on desktop,
 **I want** a sticky navigation bar with clear links to all main pages,
 **So that** I can easily explore services, pricing, and contact information without scrolling back to the top.
 
@@ -122,7 +122,7 @@ The Navbar and Footer components solve this fundamental UX challenge by providin
 ---
 
 ### US-004: Call-to-Action Access
-**As a** visitor interested in VelocityAI's services,
+**As a** visitor interested in Velobiz's services,
 **I want** a prominent "Get Started" button in the navbar,
 **So that** I can easily navigate to the contact form from any page.
 
@@ -145,7 +145,7 @@ The Navbar and Footer components solve this fundamental UX challenge by providin
 - Footer includes Company column (About, Careers, Blog)
 - Footer includes Legal column (Privacy Policy, Terms, Cookie Policy)
 - Footer includes social media icons (LinkedIn, Twitter, GitHub) that open in new tabs
-- Footer displays copyright notice: "© 2026 VelocityAI. All rights reserved."
+- Footer displays copyright notice: "© 2026 Velobiz. All rights reserved."
 - Footer layout is responsive (4 columns → 2 columns → 1 column)
 
 ---
@@ -205,7 +205,7 @@ The Navbar and Footer components solve this fundamental UX challenge by providin
 - Footer layout must collapse to 1 column on mobile (<768px)
 - Footer must include social media icons row (LinkedIn, Twitter, GitHub)
 - Social links must open in new tabs with `target="_blank"` and `rel="noopener noreferrer"`
-- Footer must display copyright notice: "© 2026 VelocityAI. All rights reserved."
+- Footer must display copyright notice: "© 2026 Velobiz. All rights reserved."
 
 ### FR-006: Configuration Management
 - Navigation links array must be defined as const in `src/app/layout/layout.config.ts`

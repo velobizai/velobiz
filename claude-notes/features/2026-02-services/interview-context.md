@@ -11,7 +11,7 @@
 
 ### 1. What is the business problem this feature solves? Who are the target users?
 
-**Problem:** Potential clients need to understand the full range of AI automation services VelocityAI offers. The home page shows 8 industry tiles but doesn't detail the actual service offerings. This feature provides a dedicated services catalog page.
+**Problem:** Potential clients need to understand the full range of AI automation services Velobiz offers. The home page shows 8 industry tiles but doesn't detail the actual service offerings. This feature provides a dedicated services catalog page.
 
 **Target Users:** Business owners, operations managers, and decision-makers researching AI automation solutions for their companies. They need detailed service descriptions to understand which solutions fit their needs before booking a consultation.
 
@@ -279,7 +279,7 @@ GET /api/services
 - Keyboard navigable
 
 **SEO:**
-- Angular Meta service sets page title: "AI Automation Services | VelocityAI"
+- Angular Meta service sets page title: "AI Automation Services | Velobiz"
 - Meta description: "Discover our 8 AI automation services..."
 - Open Graph tags for social sharing
 

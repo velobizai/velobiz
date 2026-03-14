@@ -1,2 +1,2 @@
-# VelocityAI
+# Velobiz
 Velocity AI

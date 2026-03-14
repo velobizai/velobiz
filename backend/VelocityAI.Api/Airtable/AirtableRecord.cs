@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace VelocityAI.Api.Airtable;
+namespace Velobiz.Api.Airtable;
 
 public class AirtableRecord<TFields> where TFields : class
 {

@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace VelocityAI.Api.Models;
+namespace Velobiz.Api.Models;
 
 public class Service
 {

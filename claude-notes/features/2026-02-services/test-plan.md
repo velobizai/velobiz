@@ -31,7 +31,7 @@ When testing is enabled, this feature will include:
 
 ### 1. Repository Tests
 
-**File:** `backend/VelocityAI.Api.Tests/Repositories/ServicesRepositoryTests.cs`
+**File:** `backend/Velobiz.Api.Tests/Repositories/ServicesRepositoryTests.cs`
 
 **Test Cases:**
 
@@ -68,7 +68,7 @@ private ApplicationDbContext GetInMemoryDbContext()
 
 ### 2. Service Layer Tests
 
-**File:** `backend/VelocityAI.Api.Tests/Services/ServicesServiceTests.cs`
+**File:** `backend/Velobiz.Api.Tests/Services/ServicesServiceTests.cs`
 
 **Test Cases:**
 
@@ -106,7 +106,7 @@ public async Task GetAllActiveServicesAsync_CallsRepository()
 
 ### 3. Controller Tests
 
-**File:** `backend/VelocityAI.Api.Tests/Controllers/ServicesControllerTests.cs`
+**File:** `backend/Velobiz.Api.Tests/Controllers/ServicesControllerTests.cs`
 
 **Test Cases:**
 
@@ -153,7 +153,7 @@ public async Task GetAll_ReturnsOk_WhenServicesExist()
 
 ### 4. Integration Tests
 
-**File:** `backend/VelocityAI.Api.Tests/Integration/ServicesEndpointTests.cs`
+**File:** `backend/Velobiz.Api.Tests/Integration/ServicesEndpointTests.cs`
 
 **Test Cases:**
 

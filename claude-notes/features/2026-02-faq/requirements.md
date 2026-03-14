@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-The FAQ Page is a dedicated `/faq` route that displays VelocityAI's frequently asked questions in an accordion layout. The page dynamically fetches 6 FAQs from the MySQL database via a RESTful API (GET /api/faqs). Unlike the current frontend implementation which has 12 hardcoded FAQs with category filtering, the production version will be simpler: a single vertical list of 6 database-driven FAQs with expand/collapse functionality.
+The FAQ Page is a dedicated `/faq` route that displays Velobiz's frequently asked questions in an accordion layout. The page dynamically fetches 6 FAQs from the MySQL database via a RESTful API (GET /api/faqs). Unlike the current frontend implementation which has 12 hardcoded FAQs with category filtering, the production version will be simpler: a single vertical list of 6 database-driven FAQs with expand/collapse functionality.
 
 ---
 
@@ -49,7 +49,7 @@ The FAQ Page is a dedicated `/faq` route that displays VelocityAI's frequently a
 
 ### Epic: View FAQ Content
 
-**US-5.1:** As a **prospective customer**, I want to **see answers to common questions about AI agents**, so that I can **decide if VelocityAI is right for my business without contacting sales first**.
+**US-5.1:** As a **prospective customer**, I want to **see answers to common questions about AI agents**, so that I can **decide if Velobiz is right for my business without contacting sales first**.
 
 **Acceptance Criteria:**
 - ✅ All 6 FAQs load from the backend API
@@ -234,7 +234,7 @@ The FAQ Page is a dedicated `/faq` route that displays VelocityAI's frequently a
 
 ### NFR-5.3: SEO
 
-- **Page Title:** "Frequently Asked Questions | VelocityAI"
+- **Page Title:** "Frequently Asked Questions | Velobiz"
 - **Meta Description:** "Get answers to common questions about AI automation, deployment timelines, security, integrations, and more."
 - **Open Graph Tags:** og:title, og:description, og:image, og:url
 - **Structured Data:** JSON-LD schema for FAQPage (future enhancement)

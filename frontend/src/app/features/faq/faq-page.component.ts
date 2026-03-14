@@ -57,18 +57,18 @@ export class FaqPageComponent implements OnInit {
   }
 
   private setMetaTags(): void {
-    this.title.setTitle('Frequently Asked Questions | VelocityAI');
+    this.title.setTitle('Frequently Asked Questions | Velobiz');
     this.meta.updateTag({
       name: 'description',
-      content: 'Get answers to common questions about VelocityAI AI automation services, implementation timelines, integrations, and more.'
+      content: 'Get answers to common questions about Velobiz AI automation services, implementation timelines, integrations, and more.'
     });
     this.meta.updateTag({
       property: 'og:title',
-      content: 'Frequently Asked Questions | VelocityAI'
+      content: 'Frequently Asked Questions | Velobiz'
     });
     this.meta.updateTag({
       property: 'og:description',
-      content: 'Get answers to common questions about VelocityAI AI automation services.'
+      content: 'Get answers to common questions about Velobiz AI automation services.'
     });
   }
 }
